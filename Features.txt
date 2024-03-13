@@ -1,0 +1,14 @@
+Features
+      - View Tending paste. Trending by Period(Current, Week, Month, Year, Alltime)
+      - View Recent pastes. Filter by languages (C, C++, Clojure ...)
+      - Veiw your Public and Private pastes.
+      - Create pastes.
+      - Delete your pastes.
+      - Edit your pastes via web interface. 
+      - Search for pastes and users.
+      - View public pastes of users.
+      - Save users
+      - Share and copy paste.
+      - Download paste.
+      - Simple UI.
+      - Night mode
