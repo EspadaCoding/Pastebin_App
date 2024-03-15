@@ -1,12 +1,88 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\Cyborg\\Documents\\GitHub\\Pastebin_App\\Uncos.BackEnd\\Uncos.BackEnd\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{FF4386F9-6427-4415-86F4-530528F46514}|Uncos.Application\\Uncos.Application.csproj|c:\\users\\cyborg\\documents\\github\\pastebin_app\\uncos.backend\\uncos.backend\\uncos.application\\news\\commands\\updatenews\\updatenewscommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FF4386F9-6427-4415-86F4-530528F46514}|Uncos.Application\\Uncos.Application.csproj|solutionrelative:uncos.application\\news\\commands\\updatenews\\updatenewscommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FF4386F9-6427-4415-86F4-530528F46514}|Uncos.Application\\Uncos.Application.csproj|c:\\users\\cyborg\\documents\\github\\pastebin_app\\uncos.backend\\uncos.backend\\uncos.application\\news\\commands\\createnews\\createnewscommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FF4386F9-6427-4415-86F4-530528F46514}|Uncos.Application\\Uncos.Application.csproj|solutionrelative:uncos.application\\news\\commands\\createnews\\createnewscommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FF4386F9-6427-4415-86F4-530528F46514}|Uncos.Application\\Uncos.Application.csproj|c:\\users\\cyborg\\documents\\github\\pastebin_app\\uncos.backend\\uncos.backend\\uncos.application\\news\\commands\\createnews\\createnewscommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FF4386F9-6427-4415-86F4-530528F46514}|Uncos.Application\\Uncos.Application.csproj|solutionrelative:uncos.application\\news\\commands\\createnews\\createnewscommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{547367DC-3432-4267-A392-6E43531557D8}|Uncos.Domain\\Uncos.Domain.csproj|c:\\users\\cyborg\\documents\\github\\pastebin_app\\uncos.backend\\uncos.backend\\uncos.domain\\news.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{547367DC-3432-4267-A392-6E43531557D8}|Uncos.Domain\\Uncos.Domain.csproj|solutionrelative:uncos.domain\\news.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "UpdateNewsCommandHandler.cs",
+              "DocumentMoniker": "C:\\Users\\Cyborg\\Documents\\GitHub\\Pastebin_App\\Uncos.BackEnd\\Uncos.BackEnd\\Uncos.Application\\News\\Commands\\UpdateNews\\UpdateNewsCommandHandler.cs",
+              "RelativeDocumentMoniker": "Uncos.Application\\News\\Commands\\UpdateNews\\UpdateNewsCommandHandler.cs",
+              "ToolTip": "C:\\Users\\Cyborg\\Documents\\GitHub\\Pastebin_App\\Uncos.BackEnd\\Uncos.BackEnd\\Uncos.Application\\News\\Commands\\UpdateNews\\UpdateNewsCommandHandler.cs",
+              "RelativeToolTip": "Uncos.Application\\News\\Commands\\UpdateNews\\UpdateNewsCommandHandler.cs",
+              "ViewState": "AQIAAAQAAAAAAAAAAAAswA0AAAAsAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-15T18:59:23.613Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "CreateNewsCommandHandler.cs",
+              "DocumentMoniker": "C:\\Users\\Cyborg\\Documents\\GitHub\\Pastebin_App\\Uncos.BackEnd\\Uncos.BackEnd\\Uncos.Application\\News\\Commands\\CreateNews\\CreateNewsCommandHandler.cs",
+              "RelativeDocumentMoniker": "Uncos.Application\\News\\Commands\\CreateNews\\CreateNewsCommandHandler.cs",
+              "ToolTip": "C:\\Users\\Cyborg\\Documents\\GitHub\\Pastebin_App\\Uncos.BackEnd\\Uncos.BackEnd\\Uncos.Application\\News\\Commands\\CreateNews\\CreateNewsCommandHandler.cs",
+              "RelativeToolTip": "Uncos.Application\\News\\Commands\\CreateNews\\CreateNewsCommandHandler.cs",
+              "ViewState": "AQIAAA4AAAAAAAAAAAAAwBcAAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-15T18:55:45.842Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "CreateNewsCommand.cs",
+              "DocumentMoniker": "C:\\Users\\Cyborg\\Documents\\GitHub\\Pastebin_App\\Uncos.BackEnd\\Uncos.BackEnd\\Uncos.Application\\News\\Commands\\CreateNews\\CreateNewsCommand.cs",
+              "RelativeDocumentMoniker": "Uncos.Application\\News\\Commands\\CreateNews\\CreateNewsCommand.cs",
+              "ToolTip": "C:\\Users\\Cyborg\\Documents\\GitHub\\Pastebin_App\\Uncos.BackEnd\\Uncos.BackEnd\\Uncos.Application\\News\\Commands\\CreateNews\\CreateNewsCommand.cs",
+              "RelativeToolTip": "Uncos.Application\\News\\Commands\\CreateNews\\CreateNewsCommand.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAADAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-15T18:55:01.521Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "News.cs",
+              "DocumentMoniker": "C:\\Users\\Cyborg\\Documents\\GitHub\\Pastebin_App\\Uncos.BackEnd\\Uncos.BackEnd\\Uncos.Domain\\News.cs",
+              "RelativeDocumentMoniker": "Uncos.Domain\\News.cs",
+              "ToolTip": "C:\\Users\\Cyborg\\Documents\\GitHub\\Pastebin_App\\Uncos.BackEnd\\Uncos.BackEnd\\Uncos.Domain\\News.cs",
+              "RelativeToolTip": "Uncos.Domain\\News.cs",
+              "ViewState": "AQIAAA8AAAAAAAAAAAAYwB4AAAAHAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-15T18:54:09.498Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
     }
   ]
 }
