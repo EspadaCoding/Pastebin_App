@@ -2,7 +2,7 @@
 
 namespace Uncos.Application.Interfaces
 {
-    public interface INewsDbContexts
+    public interface IUncosDbContext
     {
         DbSet<Uncos.Domain.News> News { get; set; }
         Task<int> SaveChangesAsync(CancellationToken cancellationToken);

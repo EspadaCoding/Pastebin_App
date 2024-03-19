@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "peJ0yxI4c1XXHFjFmIS4n0AVfS7bYUCHaRd9gVHkUNuqsvLeGP7+68giQ65We/8sEPvKxT33PPH2d3cgo429HQ==",
+  "dgSpecHash": "nY8C8PzG/SJOerEWprIOY9gWRag5z7/904TRASzwrQ5fUYO1vQyC+Rg65IeFw2jyEpjbYME7wt113gVbJA7Frg==",
   "success": true,
   "projectFilePath": "C:\\Users\\Cyborg\\Documents\\GitHub\\Pastebin_App\\Uncos.BackEnd\\Uncos.BackEnd\\Uncos.Persistence\\Uncos.Persistence.csproj",
   "expectedPackageFiles": [
@@ -9,6 +9,7 @@
     "C:\\Users\\Cyborg\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",
     "C:\\Users\\Cyborg\\.nuget\\packages\\mediatr\\12.2.0\\mediatr.12.2.0.nupkg.sha512",
     "C:\\Users\\Cyborg\\.nuget\\packages\\mediatr.contracts\\2.0.1\\mediatr.contracts.2.0.1.nupkg.sha512",
+    "C:\\Users\\Cyborg\\.nuget\\packages\\mediatr.extensions.microsoft.dependencyinjectionfixed\\5.1.2\\mediatr.extensions.microsoft.dependencyinjectionfixed.5.1.2.nupkg.sha512",
     "C:\\Users\\Cyborg\\.nuget\\packages\\microsoft.aspnetcore.http.abstractions\\2.2.0\\microsoft.aspnetcore.http.abstractions.2.2.0.nupkg.sha512",
     "C:\\Users\\Cyborg\\.nuget\\packages\\microsoft.aspnetcore.http.features\\2.2.0\\microsoft.aspnetcore.http.features.2.2.0.nupkg.sha512",
     "C:\\Users\\Cyborg\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",

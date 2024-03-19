@@ -10,7 +10,7 @@ using Uncos.Persistence.EntityTypeConfiguration;
 
 namespace Uncos.Persistence
 {
-    public class UncosDbContext:DbContext, INewsDbContexts
+    public class UncosDbContext:DbContext, IUncosDbContext
     {
         public UncosDbContext(DbContextOptions<UncosDbContext> options) : base(options) { }
 
