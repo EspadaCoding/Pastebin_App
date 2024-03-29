@@ -17,9 +17,9 @@ namespace Uncos.Application.News.Queries.GetNewsDetails
     public class GetNewsDetailsQueryHandler
         : IRequestHandler<GetNewsDetailsQuery, NewsDetailsVm>
     {
-        private readonly INewsDbContexts _dbContext;
+        private readonly IUncosDbContext _dbContext;
         private readonly IMapper _mapper;
-        public GetNewsDetailsQueryHandler(INewsDbContexts dbContext,IMapper mapper)
+        public GetNewsDetailsQueryHandler(IUncosDbContext dbContext,IMapper mapper)
         => (_dbContext,_mapper) = (dbContext,mapper);
 
         public async Task<NewsDetailsVm> Handle(GetNewsDetailsQuery request,

@@ -1,0 +1,16 @@
+C:\Users\Cyborg\Documents\GitHub\Pastebin_App\Uncos.BackEnd\Uncos.BackEnd\Uncos.Application\obj\Debug\net8.0\Uncos.Application.csproj.AssemblyReference.cache
+C:\Users\Cyborg\Documents\GitHub\Pastebin_App\Uncos.BackEnd\Uncos.BackEnd\Uncos.Application\obj\Debug\net8.0\Uncos.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Cyborg\Documents\GitHub\Pastebin_App\Uncos.BackEnd\Uncos.BackEnd\Uncos.Application\obj\Debug\net8.0\Uncos.Application.AssemblyInfoInputs.cache
+C:\Users\Cyborg\Documents\GitHub\Pastebin_App\Uncos.BackEnd\Uncos.BackEnd\Uncos.Application\obj\Debug\net8.0\Uncos.Application.AssemblyInfo.cs
+C:\Users\Cyborg\Documents\GitHub\Pastebin_App\Uncos.BackEnd\Uncos.BackEnd\Uncos.Application\obj\Debug\net8.0\Uncos.Application.csproj.CoreCompileInputs.cache
+C:\Users\Cyborg\Documents\GitHub\Pastebin_App\Uncos.BackEnd\Uncos.BackEnd\Uncos.Application\obj\Debug\net8.0\Uncos.Application.sourcelink.json
+C:\Users\Cyborg\Documents\GitHub\Pastebin_App\Uncos.BackEnd\Uncos.BackEnd\Uncos.Application\bin\Debug\net8.0\Uncos.Application.deps.json
+C:\Users\Cyborg\Documents\GitHub\Pastebin_App\Uncos.BackEnd\Uncos.BackEnd\Uncos.Application\bin\Debug\net8.0\Uncos.Application.dll
+C:\Users\Cyborg\Documents\GitHub\Pastebin_App\Uncos.BackEnd\Uncos.BackEnd\Uncos.Application\bin\Debug\net8.0\Uncos.Application.pdb
+C:\Users\Cyborg\Documents\GitHub\Pastebin_App\Uncos.BackEnd\Uncos.BackEnd\Uncos.Application\bin\Debug\net8.0\Uncos.Domain.dll
+C:\Users\Cyborg\Documents\GitHub\Pastebin_App\Uncos.BackEnd\Uncos.BackEnd\Uncos.Application\bin\Debug\net8.0\Uncos.Domain.pdb
+C:\Users\Cyborg\Documents\GitHub\Pastebin_App\Uncos.BackEnd\Uncos.BackEnd\Uncos.Application\obj\Debug\net8.0\Uncos.Ap.12B80C5D.Up2Date
+C:\Users\Cyborg\Documents\GitHub\Pastebin_App\Uncos.BackEnd\Uncos.BackEnd\Uncos.Application\obj\Debug\net8.0\Uncos.Application.dll
+C:\Users\Cyborg\Documents\GitHub\Pastebin_App\Uncos.BackEnd\Uncos.BackEnd\Uncos.Application\obj\Debug\net8.0\refint\Uncos.Application.dll
+C:\Users\Cyborg\Documents\GitHub\Pastebin_App\Uncos.BackEnd\Uncos.BackEnd\Uncos.Application\obj\Debug\net8.0\Uncos.Application.pdb
+C:\Users\Cyborg\Documents\GitHub\Pastebin_App\Uncos.BackEnd\Uncos.BackEnd\Uncos.Application\obj\Debug\net8.0\ref\Uncos.Application.dll

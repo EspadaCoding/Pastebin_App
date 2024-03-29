@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Uncos.Domain;
 
 namespace Uncos.Application.News.Commands.UpdateNews
 {
@@ -13,7 +14,7 @@ namespace Uncos.Application.News.Commands.UpdateNews
         public Guid Id { get; set; }
         public string Title { get; set; }
         public string Content { get; set; }
-        public string PosterUrl { get; set; }
+        public FILE Poster { get; set; }
 
     }
 }

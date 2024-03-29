@@ -13,11 +13,11 @@ namespace Uncos.Application.News.Commands.DeleteNews
 {
     public class DeleteNewsCommandHandler : IRequestHandler<DeleteNewsCommand>
     {
-        private readonly INewsDbContexts _dbContext;
-        public DeleteNewsCommandHandler(INewsDbContexts dbContext)
+        private readonly IUncosDbContext _dbContext;
+        public DeleteNewsCommandHandler(IUncosDbContext dbContext)
         => _dbContext = dbContext;
 
-        public async Task<Unit> Handle(DeleteNewsCommand request,
+        public async Task Handle(DeleteNewsCommand request,
             CancellationToken cancellationToken)
         {
             var entity = await _dbContext.News.FindAsync(new object[] { request.Id },cancellationToken);
@@ -26,8 +26,7 @@ namespace Uncos.Application.News.Commands.DeleteNews
                 throw new NotFoundException(nameof(Uncos.Domain.News), request.Id);
             }
             _dbContext.News.Remove(entity);
-            await _dbContext.SaveChangesAsync(cancellationToken);
-            return Unit.Value;
+            await _dbContext.SaveChangesAsync(cancellationToken); 
         }
     }
 }

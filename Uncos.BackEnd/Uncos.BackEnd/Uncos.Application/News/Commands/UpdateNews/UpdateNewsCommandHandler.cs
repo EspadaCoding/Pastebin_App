@@ -14,11 +14,11 @@ namespace Uncos.Application.News.Commands.UpdateNews
         : IRequestHandler<UpdateNewsCommand>
           
     {
-        private readonly INewsDbContexts _dbContext;
-        public UpdateNewsCommandHandler(INewsDbContexts dbContext)
+        private readonly IUncosDbContext _dbContext;
+        public UpdateNewsCommandHandler(IUncosDbContext dbContext)
         => _dbContext = dbContext;
 
-        public async Task<Unit> Handle(UpdateNewsCommand request, CancellationToken cancellationToken)
+        public async Task Handle(UpdateNewsCommand request, CancellationToken cancellationToken)
         { 
                 var entity = await _dbContext.News.FirstOrDefaultAsync(
                     news => news.Id == request.Id, cancellationToken);
@@ -29,8 +29,7 @@ namespace Uncos.Application.News.Commands.UpdateNews
                 entity.Title = request.Title;
                 entity.Content = request.Content;
                 entity.EditDate = DateTime.Now;
-                await _dbContext.SaveChangesAsync(cancellationToken);
-                return Unit.Value; 
+                await _dbContext.SaveChangesAsync(cancellationToken); 
         }
     }
 }

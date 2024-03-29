@@ -12,3 +12,4 @@ Features
       - Download paste.
       - Simple UI.
       - Night mode
+      - Pastes life timer

@@ -13,8 +13,8 @@ namespace Uncos.Application.News.Commands.CreateNews
     public class CreateNewsCommandHandler
         : IRequestHandler<CreateNewsCommand, Guid>
     {
-        private readonly INewsDbContexts _dbContext;
-        public CreateNewsCommandHandler(INewsDbContexts dbContext)
+        private readonly IUncosDbContext _dbContext;
+        public CreateNewsCommandHandler(IUncosDbContext dbContext)
         => _dbContext = dbContext;
 
         public async Task<Guid> Handle(CreateNewsCommand request, 
@@ -26,9 +26,9 @@ namespace Uncos.Application.News.Commands.CreateNews
                 Id = Guid.NewGuid(),
                 Title = request.Title,
                 Content = request.Content,
-                PosterUrl = request.PosterUrl,
+                Poster = request.Poster,
                 CreatedDate = DateTime.Now ,
-                 EditDate = null ,
+                EditDate = null ,
             };
             await _dbContext.News.AddAsync(news, cancellationToken);
             await _dbContext.SaveChangesAsync(cancellationToken);

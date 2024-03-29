@@ -22,7 +22,7 @@ namespace Uncos.Domain
         [DataType(DataType.MultilineText)]
         public string Content { get; set; }
          
-        public string PosterUrl { get; set; }
+        public FILE Poster { get; set; }
 
         [Display(Name = "Likes")]
         public int Likes { get; set; } = 0; 

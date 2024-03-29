@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Uncos.Application.Common.Mappings;
+using Uncos.Domain;
 
 namespace Uncos.Application.News.Queries.GetNewsDetails
 {
@@ -13,7 +14,7 @@ namespace Uncos.Application.News.Queries.GetNewsDetails
         public Guid Id { get; set; }
         public string Title { get; set; }
         public string Content { get; set; }
-        public string PosterUrl { get; set; }
+        public FILE Poster{ get; set; }
         public DateTime CreatedDate { get; set; }
         public DateTime? EditDate { get; set; }
         public void Mapping(Profile profile)

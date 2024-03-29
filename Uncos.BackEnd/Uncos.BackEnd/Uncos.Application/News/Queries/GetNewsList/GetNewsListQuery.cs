@@ -1,6 +1,6 @@
 ﻿using MediatR;
 
-namespace Uncos.Application.News.Queries.GetNoteList
+namespace Uncos.Application.News.Queries.GetNewsList
 {
     public class GetNewsListQuery:IRequest<NewsListVm>
     {

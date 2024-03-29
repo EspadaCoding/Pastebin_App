@@ -11,9 +11,8 @@ namespace Uncos.Persistence
 {
     public class DbInitializer
     {
-        public static  void Initialize(UncosDbContext context, IApplicationBuilder app)
-        {
-            using var services = app.ApplicationServices.CreateScope();  
+        public static  void Initialize(UncosDbContext context)
+        { 
         
             if(!context.Database.EnsureCreated())
             {

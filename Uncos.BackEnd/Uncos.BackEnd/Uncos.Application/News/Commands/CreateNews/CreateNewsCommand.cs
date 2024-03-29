@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Uncos.Domain;
 
 namespace Uncos.Application.News.Commands.CreateNews
 {
@@ -12,6 +13,6 @@ namespace Uncos.Application.News.Commands.CreateNews
         public Guid userId { get; set; }
         public string Title { get; set; }
         public string Content { get; set; }
-        public string PosterUrl { get; set; } 
+        public FILE Poster { get; set; } 
     }
 }

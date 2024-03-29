@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Uncos.Application.News.Queries.GetNoteList
+namespace Uncos.Application.News.Queries.GetNewsList
 {
     public class NewsListVm
     {
