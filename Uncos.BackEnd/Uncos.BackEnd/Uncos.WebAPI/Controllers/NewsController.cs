@@ -1,13 +1,12 @@
-﻿using AutoMapper;
-using System;
-using System.Threading.Tasks;
+﻿using AutoMapper; 
 using Microsoft.AspNetCore.Mvc;
 using Uncos.Application.News.Queries.GetNewsList;
 using Uncos.Application.News.Queries.GetNewsDetails;
 using Uncos.Application.News.Commands.CreateNews;
 using Uncos.Application.News.Commands.UpdateNews;
 using Uncos.Application.News.Commands.DeleteNews;
-using Uncos.WebAPI.Models;
+using Uncos.WebAPI.Models; 
+using Uncos.Domain; 
 namespace Uncos.WebAPI.Controllers
 {
     [ApiController]
@@ -47,7 +46,10 @@ namespace Uncos.WebAPI.Controllers
             return Ok(vm);
         }
 
-        [HttpPost]
+        [HttpPost] 
+        [Route("Create")]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
         public async Task<ActionResult<Guid>> Create([FromForm] CreateNewsDto createNewsDto)
         {
             var command = _mapper.Map<CreateNewsCommand>(createNewsDto);
@@ -56,7 +58,10 @@ namespace Uncos.WebAPI.Controllers
             return Ok(NewsId);
         }
 
-        [HttpPut]
+        [HttpPut] 
+        [Route("Update/{id}")]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
         public async Task<IActionResult> Update([FromForm] UpdateNewsDto updateNewsDto)
         {
             var command = _mapper.Map<UpdateNewsCommand>(updateNewsDto);
@@ -65,7 +70,10 @@ namespace Uncos.WebAPI.Controllers
             return NoContent();
         }
 
-        [HttpDelete("{id}")]
+        [HttpDelete] 
+        [Route("Delete/{id}")]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
         public async Task<IActionResult> Delete(Guid id)
         {
             var command = new DeleteNewsCommand
@@ -75,8 +83,7 @@ namespace Uncos.WebAPI.Controllers
             };
             await Mediator.Send(command);
             return NoContent();
-        }
-
+        } 
 
     }
 }

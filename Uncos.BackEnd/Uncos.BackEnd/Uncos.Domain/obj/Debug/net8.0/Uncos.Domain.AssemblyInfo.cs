@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Uncos.Domain")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7c24132a200b9ae73aa07e1d3a3a0ce60b149d02")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9d8bc34c24ef241c12e1e17129f95a57fda9c8fd")]
 [assembly: System.Reflection.AssemblyProductAttribute("Uncos.Domain")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Uncos.Domain")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

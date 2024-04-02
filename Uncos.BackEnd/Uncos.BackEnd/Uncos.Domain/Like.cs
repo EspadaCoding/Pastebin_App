@@ -11,7 +11,7 @@ namespace Uncos.Domain
     {
         public int Id { get; set; }
         public int NewsId { get; set; }
-        public string UserID { get; set; }
+        public Guid UserID { get; set; }
         public DateTime LikedDate { get; set; }
         public bool Liked { get; set; }
     }

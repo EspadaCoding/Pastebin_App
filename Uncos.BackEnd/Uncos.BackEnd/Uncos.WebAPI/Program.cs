@@ -6,11 +6,83 @@ using Uncos.Application;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.OpenApi.Models;
 using Uncos.WebAPI.Middleware;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.IdentityModel.Tokens;
+using System.Text; 
 
 var builder = WebApplication.CreateBuilder(args);
-var app = builder.Build();
-var services = builder.Services;
 
+var services = builder.Services;
+ConfigurationManager configuration = builder.Configuration;
+ 
+
+
+
+
+// Here goes code from Startup.ConfigureServices 
+services.AddDbContext<UncosDbContext>(option =>
+{
+    option.UseSqlServer(builder.Configuration.GetConnectionString("SqlServer"));
+});
+services.AddIdentity<IdentityUser, IdentityRole>()
+        .AddEntityFrameworkStores<UncosDbContext>()
+        .AddDefaultTokenProviders();
+
+services.AddAutoMapper(config =>
+{
+    config.AddProfile(new AssemblyMappingProfile(Assembly.GetExecutingAssembly()));
+    config.AddProfile(new AssemblyMappingProfile(typeof(IUncosDbContext).Assembly));
+});
+
+services.AddApplication();
+services.AddPersistence(configuration);
+services.AddControllers();
+
+services.AddCors(options =>
+{
+    options.AddPolicy("AllowAll", policy =>
+    {
+        policy.AllowAnyHeader();
+        policy.AllowAnyMethod();
+        policy.AllowAnyOrigin();
+    });
+});
+
+
+ 
+
+// Adding Authentication
+builder.Services.AddAuthentication(options =>
+{
+    options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+    options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+    options.DefaultScheme = JwtBearerDefaults.AuthenticationScheme;
+})
+
+// Adding Jwt Bearer
+.AddJwtBearer(options =>
+{
+    options.SaveToken = true;
+    options.RequireHttpsMetadata = false;
+    options.TokenValidationParameters = new TokenValidationParameters()
+    {
+        ValidateIssuer = true,
+        ValidateAudience = true,
+        ValidAudience = configuration["JWT:ValidAudience"],
+        ValidIssuer = configuration["JWT:ValidIssuer"],
+        IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(configuration["JWT:Secret"]))
+    };
+});
+
+services.AddSwaggerGen(options => {
+    options.SwaggerDoc("v1", new OpenApiInfo { Title = "Persons API", Description = "'IT Step' REST API example!", Version = "v1" });
+    
+});
+
+
+
+var app = builder.Build();//After Adding everything we can use Build();
 using (var scope = app.Services.CreateScope())
 {
     var serviceProvider = scope.ServiceProvider;
@@ -25,46 +97,8 @@ using (var scope = app.Services.CreateScope())
     }
 }
 
-
-
-
-// Here goes code from Startup.ConfigureServices 
-services.AddAutoMapper(config =>
-{
-    config.AddProfile(new AssemblyMappingProfile(Assembly.GetExecutingAssembly()));
-    config.AddProfile(new AssemblyMappingProfile(typeof(IUncosDbContext).Assembly));
-});
-
-services.AddApplication();
-services.AddPersistence(builder.Configuration);
-services.AddControllers();
-
-services.AddCors(options =>
-{
-    options.AddPolicy("AllowAll", policy =>
-    {
-        policy.AllowAnyHeader();
-        policy.AllowAnyMethod();
-        policy.AllowAnyOrigin();
-    });
-});
-
-services.AddDbContext<UncosDbContext>(option =>
-{
-    option.UseSqlServer(builder.Configuration.GetConnectionString("SqlServer"));
-}); 
-
-services.AddSwaggerGen(options => {
-    options.SwaggerDoc("v1", new OpenApiInfo { Title = "Persons API", Description = "'IT Step' REST API example!", Version = "v1" });
-    
-});
-
-
-
-
-
 // Here goes code from Startup.Configure
- 
+
 if (app.Environment.IsDevelopment())
 {
     app.UseDeveloperExceptionPage();
@@ -81,6 +115,8 @@ app.UseSwaggerUI(option => {
 app.UseCustomExceptionHandler();
 app.UseRouting();
 app.UseHttpsRedirection();
+app.UseAuthentication();
+app.UseAuthorization();
 app.UseCors("AllowAll");
 
 app.UseEndpoints(endpoints =>

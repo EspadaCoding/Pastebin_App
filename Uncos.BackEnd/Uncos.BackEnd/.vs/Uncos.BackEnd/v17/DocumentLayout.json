@@ -3,16 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\Cyborg\\Documents\\GitHub\\Pastebin_App\\Uncos.BackEnd\\Uncos.BackEnd\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{909266CE-BB79-4518-AA51-95F5A7201ACE}|Uncos.WebAPI\\Uncos.WebAPI.csproj|c:\\users\\cyborg\\documents\\github\\pastebin_app\\uncos.backend\\uncos.backend\\uncos.webapi\\middleware\\customexceptionhandlermiddlewareextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{909266CE-BB79-4518-AA51-95F5A7201ACE}|Uncos.WebAPI\\Uncos.WebAPI.csproj|solutionrelative:uncos.webapi\\middleware\\customexceptionhandlermiddlewareextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{909266CE-BB79-4518-AA51-95F5A7201ACE}|Uncos.WebAPI\\Uncos.WebAPI.csproj|c:\\users\\cyborg\\documents\\github\\pastebin_app\\uncos.backend\\uncos.backend\\uncos.webapi\\middleware\\customexceptionhandlermiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{909266CE-BB79-4518-AA51-95F5A7201ACE}|Uncos.WebAPI\\Uncos.WebAPI.csproj|solutionrelative:uncos.webapi\\middleware\\customexceptionhandlermiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{909266CE-BB79-4518-AA51-95F5A7201ACE}|Uncos.WebAPI\\Uncos.WebAPI.csproj|c:\\users\\cyborg\\documents\\github\\pastebin_app\\uncos.backend\\uncos.backend\\uncos.webapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{909266CE-BB79-4518-AA51-95F5A7201ACE}|Uncos.WebAPI\\Uncos.WebAPI.csproj|solutionrelative:uncos.webapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FF4386F9-6427-4415-86F4-530528F46514}|Uncos.Application\\Uncos.Application.csproj|c:\\users\\cyborg\\documents\\github\\pastebin_app\\uncos.backend\\uncos.backend\\uncos.application\\dependencyinjection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FF4386F9-6427-4415-86F4-530528F46514}|Uncos.Application\\Uncos.Application.csproj|solutionrelative:uncos.application\\dependencyinjection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{909266CE-BB79-4518-AA51-95F5A7201ACE}|Uncos.WebAPI\\Uncos.WebAPI.csproj|c:\\users\\cyborg\\documents\\github\\pastebin_app\\uncos.backend\\uncos.backend\\uncos.webapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{909266CE-BB79-4518-AA51-95F5A7201ACE}|Uncos.WebAPI\\Uncos.WebAPI.csproj|solutionrelative:uncos.webapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{909266CE-BB79-4518-AA51-95F5A7201ACE}|Uncos.WebAPI\\Uncos.WebAPI.csproj|c:\\users\\cyborg\\documents\\github\\pastebin_app\\uncos.backend\\uncos.backend\\uncos.webapi\\models\\loginmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{909266CE-BB79-4518-AA51-95F5A7201ACE}|Uncos.WebAPI\\Uncos.WebAPI.csproj|solutionrelative:uncos.webapi\\models\\loginmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,44 +26,59 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "CustomExceptionHandlerMiddlewareExtensions.cs",
-              "DocumentMoniker": "C:\\Users\\Cyborg\\Documents\\GitHub\\Pastebin_App\\Uncos.BackEnd\\Uncos.BackEnd\\Uncos.WebAPI\\Middleware\\CustomExceptionHandlerMiddlewareExtensions.cs",
-              "RelativeDocumentMoniker": "Uncos.WebAPI\\Middleware\\CustomExceptionHandlerMiddlewareExtensions.cs",
-              "ToolTip": "C:\\Users\\Cyborg\\Documents\\GitHub\\Pastebin_App\\Uncos.BackEnd\\Uncos.BackEnd\\Uncos.WebAPI\\Middleware\\CustomExceptionHandlerMiddlewareExtensions.cs",
-              "RelativeToolTip": "Uncos.WebAPI\\Middleware\\CustomExceptionHandlerMiddlewareExtensions.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAABJAAAA",
+              "DocumentIndex": 1,
+              "Title": "DependencyInjection.cs",
+              "DocumentMoniker": "C:\\Users\\Cyborg\\Documents\\GitHub\\Pastebin_App\\Uncos.BackEnd\\Uncos.BackEnd\\Uncos.Application\\DependencyInjection.cs",
+              "RelativeDocumentMoniker": "Uncos.Application\\DependencyInjection.cs",
+              "ToolTip": "C:\\Users\\Cyborg\\Documents\\GitHub\\Pastebin_App\\Uncos.BackEnd\\Uncos.BackEnd\\Uncos.Application\\DependencyInjection.cs",
+              "RelativeToolTip": "Uncos.Application\\DependencyInjection.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAawA4AAAA4AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-29T16:06:40.948Z",
+              "WhenOpened": "2024-04-02T19:29:11.632Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "CustomExceptionHandlerMiddleware.cs",
-              "DocumentMoniker": "C:\\Users\\Cyborg\\Documents\\GitHub\\Pastebin_App\\Uncos.BackEnd\\Uncos.BackEnd\\Uncos.WebAPI\\Middleware\\CustomExceptionHandlerMiddleware.cs",
-              "RelativeDocumentMoniker": "Uncos.WebAPI\\Middleware\\CustomExceptionHandlerMiddleware.cs",
-              "ToolTip": "C:\\Users\\Cyborg\\Documents\\GitHub\\Pastebin_App\\Uncos.BackEnd\\Uncos.BackEnd\\Uncos.WebAPI\\Middleware\\CustomExceptionHandlerMiddleware.cs",
-              "RelativeToolTip": "Uncos.WebAPI\\Middleware\\CustomExceptionHandlerMiddleware.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAB4AAAAeAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-29T15:53:00.623Z"
+              "DocumentIndex": 2,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\Cyborg\\Documents\\GitHub\\Pastebin_App\\Uncos.BackEnd\\Uncos.BackEnd\\Uncos.WebAPI\\appsettings.json",
+              "RelativeDocumentMoniker": "Uncos.WebAPI\\appsettings.json",
+              "ToolTip": "C:\\Users\\Cyborg\\Documents\\GitHub\\Pastebin_App\\Uncos.BackEnd\\Uncos.BackEnd\\Uncos.WebAPI\\appsettings.json",
+              "RelativeToolTip": "Uncos.WebAPI\\appsettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-04-01T18:06:34.031Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
+              "Title": "LoginModel.cs",
+              "DocumentMoniker": "C:\\Users\\Cyborg\\Documents\\GitHub\\Pastebin_App\\Uncos.BackEnd\\Uncos.BackEnd\\Uncos.WebAPI\\Models\\LoginModel.cs",
+              "RelativeDocumentMoniker": "Uncos.WebAPI\\Models\\LoginModel.cs",
+              "ToolTip": "C:\\Users\\Cyborg\\Documents\\GitHub\\Pastebin_App\\Uncos.BackEnd\\Uncos.BackEnd\\Uncos.WebAPI\\Models\\LoginModel.cs",
+              "RelativeToolTip": "Uncos.WebAPI\\Models\\LoginModel.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-01T18:05:35.473Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\Cyborg\\Documents\\GitHub\\Pastebin_App\\Uncos.BackEnd\\Uncos.BackEnd\\Uncos.WebAPI\\Program.cs",
               "RelativeDocumentMoniker": "Uncos.WebAPI\\Program.cs",
               "ToolTip": "C:\\Users\\Cyborg\\Documents\\GitHub\\Pastebin_App\\Uncos.BackEnd\\Uncos.BackEnd\\Uncos.WebAPI\\Program.cs",
               "RelativeToolTip": "Uncos.WebAPI\\Program.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "ViewState": "AQIAAEgAAAAAAAAAAAAqwFQAAABHAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-27T12:09:49.928Z"
+              "WhenOpened": "2024-03-31T21:12:07.222Z",
+              "EditorCaption": ""
             }
           ]
         }

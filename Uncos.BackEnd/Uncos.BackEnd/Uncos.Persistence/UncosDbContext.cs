@@ -1,4 +1,6 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,7 +12,7 @@ using Uncos.Persistence.EntityTypeConfiguration;
 
 namespace Uncos.Persistence
 {
-    public class UncosDbContext:DbContext, IUncosDbContext
+    public class UncosDbContext: IdentityDbContext<IdentityUser>, IUncosDbContext
     {
         public UncosDbContext(DbContextOptions<UncosDbContext> options) : base(options) { }
 
