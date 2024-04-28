@@ -13,6 +13,6 @@ namespace Uncos.Application.News.Commands.CreateNews
         public Guid userId { get; set; }
         public string Title { get; set; }
         public string Content { get; set; }
-        public FILE Poster { get; set; } 
+        public string Poster { get; set; } 
     }
 }

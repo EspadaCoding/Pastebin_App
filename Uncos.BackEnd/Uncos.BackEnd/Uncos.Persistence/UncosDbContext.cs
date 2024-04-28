@@ -18,10 +18,16 @@ namespace Uncos.Persistence
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            modelBuilder.Entity<IdentityUser>() 
+                .HasIndex(u => u.UserName)
+                .IsUnique();
+            modelBuilder.Entity<IdentityUser>()
+                .HasIndex(u => u.Email)
+                .IsUnique(); 
             modelBuilder.ApplyConfiguration(new NewsTagConfiguration());
             base.OnModelCreating(modelBuilder);
         }
-        public DbSet<Category> Categories { get; set; }
+        public DbSet<Category> Categories { get; set; } 
         public DbSet<Like> Like { get; set; }
         public DbSet<Tag> Tags { get; set; }
         public DbSet<NewsTag> NewsTags { get; set; }

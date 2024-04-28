@@ -10,7 +10,7 @@ namespace Uncos.WebAPI.Models
         public Guid Id { get; set; }
         public string Title { get; set; }
         public string Content { get; set; }
-        public FILE Poster { get; set; }
+        public string Poster { get; set; }
 
         public void Mapping(Profile profile)
         {

@@ -76,7 +76,7 @@ builder.Services.AddAuthentication(options =>
 });
 
 services.AddSwaggerGen(options => {
-    options.SwaggerDoc("v1", new OpenApiInfo { Title = "Persons API", Description = "'IT Step' REST API example!", Version = "v1" });
+    options.SwaggerDoc("v1", new OpenApiInfo { Title = "Uncos API", Version = "v1" });
     
 });
 

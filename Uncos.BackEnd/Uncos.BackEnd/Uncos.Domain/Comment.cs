@@ -10,8 +10,8 @@ namespace Uncos.Domain
 {
     [Table("Comment")]
     public class Comment
-    {
-        public int Id { get; set; }
+    { 
+        public Guid Id { get; set; }
         [Display(Name = "News content text")] 
         [DataType(DataType.MultilineText)]
         public string Content { get; set; }

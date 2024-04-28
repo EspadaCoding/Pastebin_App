@@ -16,3 +16,5 @@ C:\Users\Cyborg\Documents\GitHub\Pastebin_App\Uncos.BackEnd\Uncos.BackEnd\Uncos.
 C:\Users\Cyborg\Documents\GitHub\Pastebin_App\Uncos.BackEnd\Uncos.BackEnd\Uncos.Persistence\obj\Debug\net8.0\refint\Uncos.Persistence.dll
 C:\Users\Cyborg\Documents\GitHub\Pastebin_App\Uncos.BackEnd\Uncos.BackEnd\Uncos.Persistence\obj\Debug\net8.0\Uncos.Persistence.pdb
 C:\Users\Cyborg\Documents\GitHub\Pastebin_App\Uncos.BackEnd\Uncos.BackEnd\Uncos.Persistence\obj\Debug\net8.0\ref\Uncos.Persistence.dll
+C:\Users\Cyborg\Documents\GitHub\Pastebin_App\Uncos.BackEnd\Uncos.BackEnd\Uncos.Persistence\bin\Debug\net8.0\Uncos.Persistence.runtimeconfig.json
+C:\Users\Cyborg\Documents\GitHub\Pastebin_App\Uncos.BackEnd\Uncos.BackEnd\Uncos.Persistence\obj\Debug\net8.0\Uncos.Persistence.genruntimeconfig.cache

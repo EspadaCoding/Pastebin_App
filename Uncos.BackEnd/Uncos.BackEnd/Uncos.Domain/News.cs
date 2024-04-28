@@ -1,38 +1,39 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Threading.Tasks;
 
 namespace Uncos.Domain
 {
+    [Table("News")]
     public class News
-    {
+    { 
         public Guid userId { get; set; }
         public Guid Id { get; set; } 
-        [Display(Name = "News title")]
-        [Required(ErrorMessage = "Error, invalid title!!!")]
-        [RegularExpression("^[A-Z][a-z]{1,99}$", ErrorMessage = "RegularExpression error!")]
-        [MinLength(8, ErrorMessage = "Error, min lenght 8 letters!")]
-        [MaxLength(100, ErrorMessage = "Error, max length 100 letters!")]
+        [Display(Name = "News title")] 
         [DataType(DataType.Text)]
         public string Title { get; set; } 
         [Display(Name = "News content text")]
         [Required(ErrorMessage = "Error, invalid content!!!")]
         [DataType(DataType.MultilineText)]
         public string Content { get; set; }
-         
-        public FILE Poster { get; set; }
+
+        [Display(Name = "Poster")]
+        public string Poster { get; set; }
 
         [Display(Name = "Likes")]
-        public int Likes { get; set; } = 0; 
-   
+        public int Likes { get; set; } = 0;
+        [Display(Name = "ItSaved")]
+        public bool ItSaved { get; set; } = false;
+
         public DateTime CreatedDate { get; set; }
         public DateTime? EditDate { get; set; }
 
         [Display(Name = "Category")]
         [Required(ErrorMessage = "Error, invalid category!!!")]
-        public int CategoryId { get; set; }
+        public Guid CategoryId { get; set; }
         public virtual Category Category { get; set; } 
 
         [Display(Name = "CountofComments")]

@@ -29,6 +29,7 @@ namespace Uncos.Application.News.Commands.UpdateNews
                 entity.Title = request.Title;
                 entity.Content = request.Content;
                 entity.EditDate = DateTime.Now;
+                entity.Poster= request.Poster;
                 await _dbContext.SaveChangesAsync(cancellationToken); 
         }
     }

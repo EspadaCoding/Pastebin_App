@@ -66,17 +66,7 @@
         "IsRequired": false
       },
       {
-        "Name": "Poster.NewsId",
-        "Type": "System.Guid",
-        "IsRequired": false
-      },
-      {
-        "Name": "Poster.FileName",
-        "Type": "System.String",
-        "IsRequired": false
-      },
-      {
-        "Name": "Poster.ContentType",
+        "Name": "Poster",
         "Type": "System.String",
         "IsRequired": false
       }
@@ -200,17 +190,7 @@
         "IsRequired": false
       },
       {
-        "Name": "Poster.NewsId",
-        "Type": "System.Guid",
-        "IsRequired": false
-      },
-      {
-        "Name": "Poster.FileName",
-        "Type": "System.String",
-        "IsRequired": false
-      },
-      {
-        "Name": "Poster.ContentType",
+        "Name": "Poster",
         "Type": "System.String",
         "IsRequired": false
       },
@@ -234,5 +214,15 @@
         "StatusCode": 404
       }
     ]
+  },
+  {
+    "ContainingType": "Uncos.WebAPI.Controllers.UploadController",
+    "Method": "Upload",
+    "RelativePath": "api/v1/Upload",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
   }
 ]
