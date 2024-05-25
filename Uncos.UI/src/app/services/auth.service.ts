@@ -15,10 +15,10 @@ export class AuthService {
   constructor(private http: HttpClient) { }
 
   login(loginObj:any): Observable<any> {
-    return this.http.post(AUTH_API + 'login', { loginObj }, httpOptions);
+    return this.http.post(AUTH_API + 'login',  loginObj , httpOptions);
   }
 
   register(signupObj:any): Observable<any> {
-    return this.http.post(AUTH_API + 'register', { signupObj }, httpOptions);
+    return this.http.post(AUTH_API + 'register', signupObj, httpOptions) ;
   }
 }

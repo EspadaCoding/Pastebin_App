@@ -9,3 +9,11 @@ sign_up_btn.addEventListener("click", () => {
 sign_in_btn.addEventListener("click", () => {
   container.classList.remove("sign-up-mode");
 });
+
+document.querySelector( document ).ready(function() {
+
+  document.querySelector(window).scroll(function(){
+  document.querySelector('.topnav').toggleClass('scrollednav py-0', document.querySelector(this).scrollTop() > 50);
+  });
+  
+});

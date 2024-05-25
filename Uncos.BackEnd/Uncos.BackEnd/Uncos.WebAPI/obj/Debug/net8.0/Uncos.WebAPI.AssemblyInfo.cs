@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Uncos.WebAPI")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ca7e58d9dd59df3b16f4ab210c6c0b5bcfec6aa5")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5a04745aa08571ae50c674f33ef49b9888190b02")]
 [assembly: System.Reflection.AssemblyProductAttribute("Uncos.WebAPI")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Uncos.WebAPI")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

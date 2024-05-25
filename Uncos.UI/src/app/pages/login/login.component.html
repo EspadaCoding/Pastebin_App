@@ -1,18 +1,22 @@
  
-<div class="container">
-  <div class="forms-container">
+<div class="ccontainer">
+  <div class="forms-ccontainer">
     <div class="signin-signup">
       <form action="#" class="sign-in-form">
         <h2 class="title">Sign in</h2>
+
         <div class="input-field">
           <i class="fa fa-user fa-5x"></i>
-          <input type="text" placeholder="Username" name="Username" [(ngModel)]="loginObj.userName"/>
+          <input type="text" placeholder="Username" name="Username" [(ngModel)]="loginObj.userName"  />
         </div>
+
         <div class="input-field">
           <i class="fa fa-solid fa-lock fa"></i>
           <input type="password" placeholder="Password" name="Password" [(ngModel)]="loginObj.password"/>
-        </div>
-        <input type="submit" value="Login" class="btn solid" onclick="onLogin()" />
+        </div> 
+
+        <button (click)="onLogin()" class="btn solid">Login</button>
+
         <p class="social-text">Or Sign in with social platforms</p>
         <div class="social-media">
           <a href="#" class="social-icon">
@@ -44,7 +48,7 @@
           <i class="fa fa-solid fa-lock fa"></i>
           <input type="password" placeholder="Password" name="Password" [(ngModel)]="signupObj.password"/>
         </div>
-        <input type="submit" class="btn" value="Sign up" onclick="onSignUp()"/>
+        <button (click)="onSignUp()" type="submit" class="btn">Sign up</button> 
         <p class="social-text">Or Sign up with social platforms</p>
         <div class="social-media">
           <a href="#" class="social-icon">
@@ -64,15 +68,14 @@
     </div>
   </div>
 
-  <div class="panels-container">
+  <div class="panels-ccontainer">
     <div class="panel left-panel">
       <div class="content">
         <h3>New here ?</h3>
         <p>
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Debitis,
-          ex ratione. Aliquid!
+         Glad to see you here,i hope you can help us , by adding your interesting news
         </p>
-        <button class="btn transparent" id="sign-up-btn" onclick="onSignUp()">
+        <button class="btn transparent" id="sign-up-btn" >
           Sign up
         </button>
       </div>
@@ -82,8 +85,8 @@
       <div class="content">
         <h3>One of us ?</h3>    
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum
-          laboriosam ad deleniti.
+          We are happy that you have chosen this news site ,
+          and will try to make happy you with fresh news
         </p>
         <button class="btn transparent" id="sign-in-btn">
           Sign in
