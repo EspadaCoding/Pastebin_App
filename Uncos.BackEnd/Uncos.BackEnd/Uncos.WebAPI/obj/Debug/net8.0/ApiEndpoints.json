@@ -1,50 +1,64 @@
 [
   {
-    "ContainingType": "Uncos.WebAPI.Controllers.AuthenticateController",
+    "ContainingType": "Uncos.WebAPI.Controllers.AuthController",
     "Method": "Login",
-    "RelativePath": "api/Authenticate/login",
+    "RelativePath": "api/Auth/login",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
         "Name": "model",
-        "Type": "Uncos.WebAPI.Models.LoginModel",
+        "Type": "Uncos.WebAPI.Models.AuthModels.LoginModel",
         "IsRequired": true
       }
     ],
     "ReturnTypes": []
   },
   {
-    "ContainingType": "Uncos.WebAPI.Controllers.AuthenticateController",
+    "ContainingType": "Uncos.WebAPI.Controllers.AuthController",
+    "Method": "Logout",
+    "RelativePath": "api/Auth/Logout",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Uncos.WebAPI.Controllers.AuthController",
     "Method": "Register",
-    "RelativePath": "api/Authenticate/register",
+    "RelativePath": "api/Auth/register",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
         "Name": "model",
-        "Type": "Uncos.WebAPI.Models.RegisterModel",
+        "Type": "Uncos.WebAPI.Models.AuthModels.RegisterModel",
         "IsRequired": true
       }
     ],
     "ReturnTypes": []
   },
   {
-    "ContainingType": "Uncos.WebAPI.Controllers.AuthenticateController",
-    "Method": "RegisterAdmin",
-    "RelativePath": "api/Authenticate/register-admin",
-    "HttpMethod": "POST",
+    "ContainingType": "Uncos.WebAPI.Controllers.SecureController",
+    "Method": "Get",
+    "RelativePath": "api/Secure/check-IsAuthenticated",
+    "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
-    "Parameters": [
-      {
-        "Name": "model",
-        "Type": "Uncos.WebAPI.Models.RegisterModel",
-        "IsRequired": true
-      }
-    ],
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Uncos.WebAPI.Controllers.SecureController",
+    "Method": "GetSecureData",
+    "RelativePath": "api/Secure/secure-data",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
     "ReturnTypes": []
   },
   {
@@ -175,24 +189,9 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "Id",
-        "Type": "System.Guid",
-        "IsRequired": false
-      },
-      {
-        "Name": "Title",
-        "Type": "System.String",
-        "IsRequired": false
-      },
-      {
-        "Name": "Content",
-        "Type": "System.String",
-        "IsRequired": false
-      },
-      {
-        "Name": "Poster",
-        "Type": "System.String",
-        "IsRequired": false
+        "Name": "updateNewsDto",
+        "Type": "Uncos.WebAPI.Models.UpdateNewsDto",
+        "IsRequired": true
       },
       {
         "Name": "id",

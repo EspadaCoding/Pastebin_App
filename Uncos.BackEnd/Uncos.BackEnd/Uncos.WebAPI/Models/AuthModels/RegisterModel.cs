@@ -1,10 +1,10 @@
-﻿using System.ComponentModel.DataAnnotations; 
+﻿using System.ComponentModel.DataAnnotations;
 
-namespace Uncos.WebAPI.Models
+namespace Uncos.WebAPI.Models.AuthModels
 {
     public class RegisterModel
     {
-        
+
 
         [Required(ErrorMessage = "User Name is required")]
         public string? Username { get; set; }

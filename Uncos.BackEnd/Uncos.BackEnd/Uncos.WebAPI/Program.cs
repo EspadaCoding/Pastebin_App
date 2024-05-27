@@ -9,7 +9,8 @@ using Uncos.WebAPI.Middleware;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
-using System.Text; 
+using System.Text;
+using Uncos.WebAPI.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -48,37 +49,63 @@ services.AddCors(options =>
         policy.AllowAnyOrigin();
     });
 });
+services.AddSwaggerGen(c =>
+{
+    c.SwaggerDoc("v1", new OpenApiInfo
+    {
+        Version = "v1",
+        Title = "Uncos API",
+        Description = "Описание API"
+    });
 
+    // Настройка для использования токена авторизации
+    c.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
+    {
+        In = ParameterLocation.Header,
+        Description = "Введите токен JWT с префиксом Bearer",
+        Name = "Authorization",
+        Type = SecuritySchemeType.ApiKey,
+        Scheme = "Bearer"
+    });
 
- 
-
-// Adding Authentication
-builder.Services.AddAuthentication(options =>
+    c.AddSecurityRequirement(new OpenApiSecurityRequirement {
+            {
+                new OpenApiSecurityScheme {
+                    Reference = new OpenApiReference {
+                        Type = ReferenceType.SecurityScheme,
+                        Id = "Bearer"
+                    }
+                },
+                new string[] {}
+            }
+        });
+});
+var key = Encoding.ASCII.GetBytes(configuration["JWT:Secret"]);
+services.AddAuthentication(options =>
 {
     options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
     options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
-    options.DefaultScheme = JwtBearerDefaults.AuthenticationScheme;
 })
-
-// Adding Jwt Bearer
 .AddJwtBearer(options =>
 {
-    options.SaveToken = true;
     options.RequireHttpsMetadata = false;
-    options.TokenValidationParameters = new TokenValidationParameters()
+    options.SaveToken = true;
+    options.TokenValidationParameters = new TokenValidationParameters
     {
         ValidateIssuer = true,
         ValidateAudience = true,
+        ValidateLifetime = true,
+        ValidateIssuerSigningKey = true,
         ValidAudience = configuration["JWT:ValidAudience"],
         ValidIssuer = configuration["JWT:ValidIssuer"],
-        IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(configuration["JWT:Secret"]))
+        IssuerSigningKey = new SymmetricSecurityKey(key)
     };
 });
 
-services.AddSwaggerGen(options => {
-    options.SwaggerDoc("v1", new OpenApiInfo { Title = "Uncos API", Version = "v1" });
-    
-});
+services.AddScoped<IUserService, UserService>();
+
+
+ 
 
 
 
@@ -111,23 +138,18 @@ app.UseSwaggerUI(option => {
     option.SwaggerEndpoint("/swagger/v1/swagger.json", "v1");
     option.RoutePrefix = string.Empty;
 });
-
+app.UseCors("AllowAll");
 app.UseCustomExceptionHandler();
-app.UseRouting();
 app.UseHttpsRedirection();
+app.UseRouting();
+
 app.UseAuthentication();
 app.UseAuthorization();
-app.UseCors("AllowAll");
 
 app.UseEndpoints(endpoints =>
 {
-    endpoints.MapGet("/", async context =>
-    {
-        await context.Response.WriteAsync("Hello World!");
-    });
     endpoints.MapControllers();
 });
-        
 
 app.Run();
 

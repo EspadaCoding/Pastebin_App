@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace Uncos.WebAPI.Models
+namespace Uncos.WebAPI.Models.AuthModels
 {
     public class LoginModel
     {
