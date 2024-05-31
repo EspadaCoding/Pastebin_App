@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Uncos.Persistence")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+809a2c28346dd21eea364c4e1b61e0dae710b1ee")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+44ca3dbcbaf5447923a3a1a5eae0d4a5d87191f1")]
 [assembly: System.Reflection.AssemblyProductAttribute("Uncos.Persistence")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Uncos.Persistence")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

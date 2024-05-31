@@ -15,6 +15,7 @@ namespace Uncos.Application.News.Commands.UpdateNews
         public string Title { get; set; }
         public string Content { get; set; }
         public string Poster { get; set; }
+        public Guid CategoryId { get; set; }
 
     }
 }

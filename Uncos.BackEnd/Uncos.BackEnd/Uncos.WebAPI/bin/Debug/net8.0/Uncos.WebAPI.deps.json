@@ -1064,6 +1064,7 @@
           "AutoMapper": "13.0.1",
           "MediatR": "12.2.0",
           "MediatR.Extensions.Microsoft.DependencyInjectionFixed": "5.1.2",
+          "Microsoft.Data.SqlClient": "5.1.5",
           "Microsoft.EntityFrameworkCore": "8.0.3",
           "Uncos.Domain": "1.0.0"
         },

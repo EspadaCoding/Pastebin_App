@@ -7,6 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Uncos.Application.Interfaces;
 using Uncos.Application.Common.Exeptions;
+using Microsoft.Data.SqlClient;
 
 namespace Uncos.Application.News.Commands.UpdateNews
 {
@@ -30,7 +31,28 @@ namespace Uncos.Application.News.Commands.UpdateNews
                 entity.Content = request.Content;
                 entity.EditDate = DateTime.Now;
                 entity.Poster= request.Poster;
-                await _dbContext.SaveChangesAsync(cancellationToken); 
+               entity.CategoryId = request.CategoryId;
+            try
+            {
+                await _dbContext.SaveChangesAsync(cancellationToken);
+            }
+            catch (DbUpdateException ex)
+            {
+                // Handle or log the exception
+                Console.WriteLine("An error occurred while saving changes: " + ex.Message);
+
+                // Check if there is an inner exception
+                if (ex.InnerException != null)
+                {
+                    if (ex.InnerException is SqlException sqlEx)
+                    {
+                        // Handle specific SQL exception
+                        Console.WriteLine("SQL error code: " + sqlEx.Number);
+                    }
+                    Console.WriteLine("Inner exception: " + ex.InnerException.Message);
+                }
+                throw;
+            } 
         }
     }
 }

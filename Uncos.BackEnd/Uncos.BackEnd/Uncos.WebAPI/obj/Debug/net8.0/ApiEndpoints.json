@@ -83,6 +83,11 @@
         "Name": "Poster",
         "Type": "System.String",
         "IsRequired": false
+      },
+      {
+        "Name": "CategoryId",
+        "Type": "System.Guid",
+        "IsRequired": false
       }
     ],
     "ReturnTypes": [
@@ -134,7 +139,7 @@
   {
     "ContainingType": "Uncos.WebAPI.Controllers.NewsController",
     "Method": "GetAll",
-    "RelativePath": "api/v1/News/GetAll",
+    "RelativePath": "api/v1/News/GetAllUserNews",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -152,7 +157,7 @@
   {
     "ContainingType": "Uncos.WebAPI.Controllers.NewsController",
     "Method": "Get",
-    "RelativePath": "api/v1/News/GetById/{id}",
+    "RelativePath": "api/v1/News/GetUserNewsById/{id}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,

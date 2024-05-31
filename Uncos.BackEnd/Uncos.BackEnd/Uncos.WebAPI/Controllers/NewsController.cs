@@ -20,7 +20,7 @@ namespace Uncos.WebAPI.Controllers
         public NewsController(IMapper mapper) => _mapper = mapper;
 
         [HttpGet]  
-        [Route("GetAll")]
+        [Route("GetAllUserNews")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         public async Task<ActionResult<NewsListVm>> GetAll()
         {
@@ -33,7 +33,7 @@ namespace Uncos.WebAPI.Controllers
         }
 
         [HttpGet] 
-        [Route("GetById/{id}")]
+        [Route("GetUserNewsById/{id}")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         public async Task<ActionResult<NewsListVm>> Get(Guid id)
@@ -53,13 +53,10 @@ namespace Uncos.WebAPI.Controllers
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         public async Task<ActionResult<Guid>> Create([FromForm] CreateNewsDto createNewsDto)
         {
-            var command = _mapper.Map<CreateNewsCommand>(createNewsDto);
-            if (User.Identity.IsAuthenticated)
-            {
-                command.userId = UserId;
-              await Mediator.Send(command);
-            }
-            return Ok( );
+            var command = _mapper.Map<CreateNewsCommand>(createNewsDto); 
+            command.userId = UserId;
+            await Mediator.Send(command); 
+            return Ok("News Created !");
         }
 
         [HttpPut]

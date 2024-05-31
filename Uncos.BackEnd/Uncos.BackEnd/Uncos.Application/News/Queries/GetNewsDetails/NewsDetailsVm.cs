@@ -17,6 +17,7 @@ namespace Uncos.Application.News.Queries.GetNewsDetails
         public string Poster{ get; set; }
         public DateTime CreatedDate { get; set; }
         public DateTime? EditDate { get; set; }
+        public Guid CategoryId { get; set; }
         public void Mapping(Profile profile)
         {
             profile.CreateMap<Uncos.Domain.News, NewsDetailsVm>()
@@ -31,7 +32,9 @@ namespace Uncos.Application.News.Queries.GetNewsDetails
                 .ForMember(newsVm => newsVm.CreatedDate,
                     opt => opt.MapFrom(news => news.CreatedDate))
                 .ForMember(newsVm => newsVm.EditDate,
-                    opt => opt.MapFrom(news => news.EditDate));
+                    opt => opt.MapFrom(news => news.EditDate))
+             .ForMember(newsVm => newsVm.CategoryId,
+                    opt => opt.MapFrom(news => news.CategoryId));
         }
     }
 }

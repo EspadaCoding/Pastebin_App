@@ -25,6 +25,14 @@ namespace Uncos.Persistence
                 .HasIndex(u => u.Email)
                 .IsUnique(); 
             modelBuilder.ApplyConfiguration(new NewsTagConfiguration());
+
+
+
+
+
+
+
+
             base.OnModelCreating(modelBuilder);
         }
         public DbSet<Category> Categories { get; set; } 
