@@ -11,6 +11,7 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
 using Uncos.WebAPI.Services;
+using Microsoft.Extensions.FileProviders;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -138,13 +139,22 @@ app.UseSwaggerUI(option => {
     option.SwaggerEndpoint("/swagger/v1/swagger.json", "v1");
     option.RoutePrefix = string.Empty;
 });
+
 app.UseCors("AllowAll");
 app.UseCustomExceptionHandler();
 app.UseHttpsRedirection();
-app.UseRouting();
+app.UseStaticFiles(); 
 
+app.UseRouting(); 
 app.UseAuthentication();
-app.UseAuthorization();
+app.UseAuthorization(); 
+
+app.UseStaticFiles(new StaticFileOptions()
+{
+    FileProvider = new PhysicalFileProvider(
+        Path.Combine(Directory.GetCurrentDirectory(), @"Resources")),
+    RequestPath = new PathString("/StaticFiles")
+});
 
 app.UseEndpoints(endpoints =>
 {

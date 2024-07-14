@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Uncos.Application.Common.Mappings;
 
-namespace Uncos.Application.News.Queries.GetNewsList
+namespace Uncos.Application.News.Queries.GetUserNewsList
 {
     public class NewsLookUpDto:IMapWith<Uncos.Domain.News>
     {

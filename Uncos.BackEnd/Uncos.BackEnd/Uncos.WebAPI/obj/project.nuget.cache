@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "CjrcVmbS51A6sRdubF5O9FQEiy49RUONTVrMpBQdjbA6MOKTXO6SMP+JSTtFqc2WeG8Osfum6doElcgj6P9zgg==",
+  "dgSpecHash": "6V7ZndKdRFpfuCEpP5e3iUdakSLGm7xipd1XsiLxrPNyV2ifRXmZDsKkWcJZQ2EMzvQVZHjV14z3ETCbfDGFfQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\Cyborg\\Documents\\GitHub\\Pastebin_App\\Uncos.BackEnd\\Uncos.BackEnd\\Uncos.WebAPI\\Uncos.WebAPI.csproj",
   "expectedPackageFiles": [
@@ -41,6 +41,9 @@
     "C:\\Users\\Cyborg\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\8.0.0\\microsoft.extensions.dependencyinjection.8.0.0.nupkg.sha512",
     "C:\\Users\\Cyborg\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\8.0.0\\microsoft.extensions.dependencyinjection.abstractions.8.0.0.nupkg.sha512",
     "C:\\Users\\Cyborg\\.nuget\\packages\\microsoft.extensions.dependencymodel\\8.0.0\\microsoft.extensions.dependencymodel.8.0.0.nupkg.sha512",
+    "C:\\Users\\Cyborg\\.nuget\\packages\\microsoft.extensions.fileproviders.abstractions\\8.0.0\\microsoft.extensions.fileproviders.abstractions.8.0.0.nupkg.sha512",
+    "C:\\Users\\Cyborg\\.nuget\\packages\\microsoft.extensions.fileproviders.physical\\8.0.0\\microsoft.extensions.fileproviders.physical.8.0.0.nupkg.sha512",
+    "C:\\Users\\Cyborg\\.nuget\\packages\\microsoft.extensions.filesystemglobbing\\8.0.0\\microsoft.extensions.filesystemglobbing.8.0.0.nupkg.sha512",
     "C:\\Users\\Cyborg\\.nuget\\packages\\microsoft.extensions.identity.core\\8.0.3\\microsoft.extensions.identity.core.8.0.3.nupkg.sha512",
     "C:\\Users\\Cyborg\\.nuget\\packages\\microsoft.extensions.identity.stores\\8.0.3\\microsoft.extensions.identity.stores.8.0.3.nupkg.sha512",
     "C:\\Users\\Cyborg\\.nuget\\packages\\microsoft.extensions.logging\\8.0.0\\microsoft.extensions.logging.8.0.0.nupkg.sha512",

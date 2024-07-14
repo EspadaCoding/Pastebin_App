@@ -7,7 +7,9 @@ using Uncos.Application.News.Commands.UpdateNews;
 using Uncos.Application.News.Commands.DeleteNews;
 using Uncos.WebAPI.Models; 
 using Uncos.Domain;
-using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Authorization; 
+using Uncos.Application.News.Queries.GetUserNewsList;
+using Uncos.Application.News.Queries.GetAllNewsList;
 namespace Uncos.WebAPI.Controllers
 {
     [ApiController]
@@ -19,12 +21,22 @@ namespace Uncos.WebAPI.Controllers
 
         public NewsController(IMapper mapper) => _mapper = mapper;
 
+        [HttpGet]
+        [Route("GetAllNews")]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        public async Task<ActionResult<AllNewsListVm>> GetAllNews()
+        {
+            var query = new GetAllNewsQuery { };
+            var vm = await Mediator.Send(query);
+            return Ok(vm);
+        }
+
         [HttpGet]  
         [Route("GetAllUserNews")]
         [ProducesResponseType(StatusCodes.Status200OK)]
-        public async Task<ActionResult<NewsListVm>> GetAll()
+        public async Task<ActionResult<UserNewsListVm>> GetAllUserNews()
         {
-            var query = new GetNewsListQuery
+            var query = new GetUserNewsListQuery
             {
                 userId = UserId
             };
@@ -36,7 +48,7 @@ namespace Uncos.WebAPI.Controllers
         [Route("GetUserNewsById/{id}")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
-        public async Task<ActionResult<NewsListVm>> Get(Guid id)
+        public async Task<ActionResult<UserNewsListVm>> Get(Guid id)
         {
             var query = new GetNewsDetailsQuery
             {

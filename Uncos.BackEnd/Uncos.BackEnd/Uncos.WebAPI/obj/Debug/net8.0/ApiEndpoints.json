@@ -62,6 +62,24 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "Uncos.WebAPI.Controllers.CategoryController",
+    "Method": "GetAll",
+    "RelativePath": "api/v1/Category/GetAll",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[Uncos.Application.Categories.Queries.GetCategory.GetCategoryVm, Uncos.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "application/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
     "ContainingType": "Uncos.WebAPI.Controllers.NewsController",
     "Method": "Create",
     "RelativePath": "api/v1/News/Create",
@@ -138,7 +156,25 @@
   },
   {
     "ContainingType": "Uncos.WebAPI.Controllers.NewsController",
-    "Method": "GetAll",
+    "Method": "GetAllNews",
+    "RelativePath": "api/v1/News/GetAllNews",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "Uncos.Application.News.Queries.GetAllNewsList.AllNewsListVm",
+        "MediaTypes": [
+          "application/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Uncos.WebAPI.Controllers.NewsController",
+    "Method": "GetAllUserNews",
     "RelativePath": "api/v1/News/GetAllUserNews",
     "HttpMethod": "GET",
     "IsController": true,
@@ -146,7 +182,7 @@
     "Parameters": [],
     "ReturnTypes": [
       {
-        "Type": "Uncos.Application.News.Queries.GetNewsList.NewsListVm",
+        "Type": "Uncos.Application.News.Queries.GetUserNewsList.UserNewsListVm",
         "MediaTypes": [
           "application/json"
         ],
@@ -170,7 +206,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "Uncos.Application.News.Queries.GetNewsList.NewsListVm",
+        "Type": "Uncos.Application.News.Queries.GetUserNewsList.UserNewsListVm",
         "MediaTypes": [
           "application/json"
         ],

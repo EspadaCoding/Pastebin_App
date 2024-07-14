@@ -1,6 +1,69 @@
-.upload {
-    font-weight:bold;
-    color:#28a745;
-    margin-left: 15px;
-    line-height: 36px;
-}
+/* General styles for buttons */
+.btn {
+    display: inline-block;
+    font-weight: 400;
+    color: #fff;
+    text-align: center;
+    vertical-align: middle;
+    user-select: none;
+    background-color: #28a745;
+    border: 1px solid #28a745;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: 0.25rem;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    cursor: pointer;
+  }
+  
+  .btn:hover {
+    background-color: #218838;
+    border-color: #1e7e34;
+  }
+  
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+    align-items: center;
+  }
+  
+  .col-md-3, .col-md-4 {
+    position: relative;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+  
+  .col-md-3 {
+    flex: 0 0 25%;
+    max-width: 25%;
+  }
+  
+  .col-md-4 {
+    flex: 0 0 33.333333%;
+    max-width: 33.333333%;
+  }
+  
+  .upload {
+    font-size: 1rem;
+    color: #6c757d;
+  }
+  
+  @media (max-width: 768px) {
+    .col-md-3, .col-md-4 {
+      flex: 0 0 100%;
+      max-width: 100%;
+      margin-bottom: 15px;
+    }
+  
+    .upload {
+      font-size: 0.875rem;
+    }
+  
+    .btn {
+      width: 100%;
+      font-size: 0.875rem;
+    }
+  }

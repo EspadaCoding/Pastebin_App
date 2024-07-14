@@ -12,6 +12,7 @@ import { SinglePostComponent } from './pages/home/single-post/single-post.compon
 import { HeaderComponent } from './layout/header/header.component';
 import { FooterComponent } from './layout/footer/footer.component';
 import { UploadComponent } from './pages/home/post-creater/upload/upload.component';
+import { CommonModule } from '@angular/common';
  
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { UploadComponent } from './pages/home/post-creater/upload/upload.compone
     UploadComponent, 
   ],
   imports: [
+    CommonModule,
     BrowserModule,
     FormsModule,
     AppRoutingModule ,

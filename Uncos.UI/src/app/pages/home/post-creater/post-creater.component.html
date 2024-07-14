@@ -2,12 +2,21 @@
     <form class="post-creator-form">
         <h1>Create a Post</h1>
         <label for="title">Title</label>
-        <input [(ngModel)]="title" type="text" class="form-control" id="title" name="title" placeholder="Enter your Title" >
+        <input [(ngModel)]="title" type="text" class="form-control" id="title" name="title" placeholder="Enter your Title">
 
         <label for="content">Content</label>
-        <textarea  type="text" class="form-control" id="discription" name="discription" placeholder="Enter your Discription" [(ngModel)]="discription"  ></textarea>
+        <textarea type="text" class="form-control" id="discription" name="discription" placeholder="Enter your Discription" [(ngModel)]="discription"></textarea>
 
-        <app-upload (onUploadFinished)="uploadFinished($event)"></app-upload> 
+        <label for="category">Category</label> 
+
+        <select [(ngModel)]="selectedCategory" name="category" required>
+            <option *ngFor="let category of categories" [ngValue]="category">
+              {{ category.name }}
+            </option>
+          </select>
+ 
+
+        <app-upload (onUploadFinished)="uploadFinished($event)"></app-upload>
 
         <button type="submit" (click)="createNews()">Post</button>
     </form>

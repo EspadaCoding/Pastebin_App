@@ -1,12 +1,102 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\Cyborg\\Documents\\GitHub\\Pastebin_App\\Uncos.BackEnd\\Uncos.BackEnd\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{FF4386F9-6427-4415-86F4-530528F46514}|Uncos.Application\\Uncos.Application.csproj|c:\\users\\cyborg\\documents\\github\\pastebin_app\\uncos.backend\\uncos.backend\\uncos.application\\news\\queries\\getallnewslist\\getallnewsqueryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FF4386F9-6427-4415-86F4-530528F46514}|Uncos.Application\\Uncos.Application.csproj|solutionrelative:uncos.application\\news\\queries\\getallnewslist\\getallnewsqueryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FF4386F9-6427-4415-86F4-530528F46514}|Uncos.Application\\Uncos.Application.csproj|c:\\users\\cyborg\\documents\\github\\pastebin_app\\uncos.backend\\uncos.backend\\uncos.application\\news\\queries\\getallnewslist\\newsdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FF4386F9-6427-4415-86F4-530528F46514}|Uncos.Application\\Uncos.Application.csproj|solutionrelative:uncos.application\\news\\queries\\getallnewslist\\newsdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FF4386F9-6427-4415-86F4-530528F46514}|Uncos.Application\\Uncos.Application.csproj|c:\\users\\cyborg\\documents\\github\\pastebin_app\\uncos.backend\\uncos.backend\\uncos.application\\news\\queries\\getallnewslist\\allnewslistvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FF4386F9-6427-4415-86F4-530528F46514}|Uncos.Application\\Uncos.Application.csproj|solutionrelative:uncos.application\\news\\queries\\getallnewslist\\allnewslistvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{909266CE-BB79-4518-AA51-95F5A7201ACE}|Uncos.WebAPI\\Uncos.WebAPI.csproj|c:\\users\\cyborg\\documents\\github\\pastebin_app\\uncos.backend\\uncos.backend\\uncos.webapi\\controllers\\newscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{909266CE-BB79-4518-AA51-95F5A7201ACE}|Uncos.WebAPI\\Uncos.WebAPI.csproj|solutionrelative:uncos.webapi\\controllers\\newscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{547367DC-3432-4267-A392-6E43531557D8}|Uncos.Domain\\Uncos.Domain.csproj|c:\\users\\cyborg\\documents\\github\\pastebin_app\\uncos.backend\\uncos.backend\\uncos.domain\\news.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{547367DC-3432-4267-A392-6E43531557D8}|Uncos.Domain\\Uncos.Domain.csproj|solutionrelative:uncos.domain\\news.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 4,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "NewsController.cs",
+              "DocumentMoniker": "C:\\Users\\Cyborg\\Documents\\GitHub\\Pastebin_App\\Uncos.BackEnd\\Uncos.BackEnd\\Uncos.WebAPI\\Controllers\\NewsController.cs",
+              "RelativeDocumentMoniker": "Uncos.WebAPI\\Controllers\\NewsController.cs",
+              "ToolTip": "C:\\Users\\Cyborg\\Documents\\GitHub\\Pastebin_App\\Uncos.BackEnd\\Uncos.BackEnd\\Uncos.WebAPI\\Controllers\\NewsController.cs",
+              "RelativeToolTip": "Uncos.WebAPI\\Controllers\\NewsController.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAABgAAAAaAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-30T10:18:55.849Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "News.cs",
+              "DocumentMoniker": "C:\\Users\\Cyborg\\Documents\\GitHub\\Pastebin_App\\Uncos.BackEnd\\Uncos.BackEnd\\Uncos.Domain\\News.cs",
+              "RelativeDocumentMoniker": "Uncos.Domain\\News.cs",
+              "ToolTip": "C:\\Users\\Cyborg\\Documents\\GitHub\\Pastebin_App\\Uncos.BackEnd\\Uncos.BackEnd\\Uncos.Domain\\News.cs",
+              "RelativeToolTip": "Uncos.Domain\\News.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAGAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-30T10:18:01.553Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "NewsDto.cs",
+              "DocumentMoniker": "C:\\Users\\Cyborg\\Documents\\GitHub\\Pastebin_App\\Uncos.BackEnd\\Uncos.BackEnd\\Uncos.Application\\News\\Queries\\GetAllNewsList\\NewsDto.cs",
+              "RelativeDocumentMoniker": "Uncos.Application\\News\\Queries\\GetAllNewsList\\NewsDto.cs",
+              "ToolTip": "C:\\Users\\Cyborg\\Documents\\GitHub\\Pastebin_App\\Uncos.BackEnd\\Uncos.BackEnd\\Uncos.Application\\News\\Queries\\GetAllNewsList\\NewsDto.cs",
+              "RelativeToolTip": "Uncos.Application\\News\\Queries\\GetAllNewsList\\NewsDto.cs",
+              "ViewState": "AQIAABEAAAAAAAAAAAA3wAwAAAAYAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-30T09:48:52.475Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "AllNewsListVm.cs",
+              "DocumentMoniker": "C:\\Users\\Cyborg\\Documents\\GitHub\\Pastebin_App\\Uncos.BackEnd\\Uncos.BackEnd\\Uncos.Application\\News\\Queries\\GetAllNewsList\\AllNewsListVm.cs",
+              "RelativeDocumentMoniker": "Uncos.Application\\News\\Queries\\GetAllNewsList\\AllNewsListVm.cs",
+              "ToolTip": "C:\\Users\\Cyborg\\Documents\\GitHub\\Pastebin_App\\Uncos.BackEnd\\Uncos.BackEnd\\Uncos.Application\\News\\Queries\\GetAllNewsList\\AllNewsListVm.cs",
+              "RelativeToolTip": "Uncos.Application\\News\\Queries\\GetAllNewsList\\AllNewsListVm.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAXAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-30T09:46:48.589Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "GetAllNewsQueryHandler.cs",
+              "DocumentMoniker": "C:\\Users\\Cyborg\\Documents\\GitHub\\Pastebin_App\\Uncos.BackEnd\\Uncos.BackEnd\\Uncos.Application\\News\\Queries\\GetAllNewsList\\GetAllNewsQueryHandler.cs",
+              "RelativeDocumentMoniker": "Uncos.Application\\News\\Queries\\GetAllNewsList\\GetAllNewsQueryHandler.cs",
+              "ToolTip": "C:\\Users\\Cyborg\\Documents\\GitHub\\Pastebin_App\\Uncos.BackEnd\\Uncos.BackEnd\\Uncos.Application\\News\\Queries\\GetAllNewsList\\GetAllNewsQueryHandler.cs",
+              "RelativeToolTip": "Uncos.Application\\News\\Queries\\GetAllNewsList\\GetAllNewsQueryHandler.cs",
+              "ViewState": "AQIAAAcAAAAAAAAAAAAAAA8AAAA0AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-30T08:28:43.265Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
     }
   ]
 }
