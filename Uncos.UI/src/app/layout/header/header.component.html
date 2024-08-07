@@ -1,48 +1,20 @@
-<header>
-    <nav class="topnav navbar navbar-expand-lg navbar-light bg-white fixed-top">
-        <div class="container">
-            <a class="navbar-brand"><strong  >Uncos</strong></a>
-            <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="navbar-collapse collapse" id="navbarColor02">
-                <ul class="navbar-nav mr-auto d-flex align-items-center">
-                    <li class="nav-item">
-                    <a class="nav-link"  >Intro <span class="sr-only">(current)</span></a>
-                    </li>
-                    <li class="nav-item">
-                    <a class="nav-link"  >Culture</a>
-                    </li>
-                    <li class="nav-item">
-                    <a class="nav-link"  >Tech</a>
-                    </li>
-                    <li class="nav-item">
-                    <a class="nav-link"  >Politics</a>
-                    </li>
-                    <li class="nav-item">
-                    <a class="nav-link"  >Health</a>
-                    </li>
-                    <li class="nav-item">
-                    <a class="nav-link" >Collections</a>
-                    </li>            
-                    <li class="nav-item">
-                    <a class="nav-link"  >About</a>
-                    </li>
-                    <li class="nav-item">
-                    <a class="nav-link"  >Template <span class="badge badge-secondary">docs</span></a>
-                    </li>
-                </ul>
-                <ul class="navbar-nav ml-auto d-flex align-items-center">
-                    <li class="nav-item highlight">
-                    <a class="nav-link"  routerLinkActive="active"  [routerLink]="['/post-creater']">Create post</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-        </nav>
+  
+<nav>
+    <input type="checkbox" id="nav-toggle">
+    <div class="logo"><strong>UNCOS</strong></div>
+    <label for="nav-toggle" class="icon-burger">
+      <div class="line"></div>
+      <div class="line"></div>
+      <div class="line"></div>
+    </label>
+    <ul class="links">
+      <li><a>Home</a></li>
+      <li><a>About</a></li>
+      <li><a>Work</a></li>
+      <li><a>Projects</a></li>
+      <li><a>Contact</a></li>
+      <li><button class="nav-button" routerLinkActive="active"  [routerLink]="['/post-creater']">Create post</button></li>
+    </ul> 
+  </nav>
+  
 
-            
-<!--------------------------------------
-HEADER
----------------------------------------> 
-</header>

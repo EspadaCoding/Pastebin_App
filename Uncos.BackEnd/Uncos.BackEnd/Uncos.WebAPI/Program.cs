@@ -37,9 +37,11 @@ services.AddAutoMapper(config =>
     config.AddProfile(new AssemblyMappingProfile(typeof(IUncosDbContext).Assembly));
 });
 
+ 
+
 services.AddApplication();
 services.AddPersistence(configuration);
-services.AddControllers();
+services.AddControllers().AddNewtonsoftJson();
 
 services.AddCors(options =>
 {
@@ -104,9 +106,13 @@ services.AddAuthentication(options =>
 });
 
 services.AddScoped<IUserService, UserService>();
+// Регистрация ILikeService и LikeService
+services.AddTransient<ILikeService, LikeService>();
+
+// Регистрация INewsService и NewsService
+services.AddTransient<INewsService, NewsService>();
 
 
- 
 
 
 

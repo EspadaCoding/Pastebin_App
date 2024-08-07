@@ -11,7 +11,7 @@ namespace Uncos.Domain
     public class Like
     { 
         public Guid Id { get; set; }
-        public int NewsId { get; set; }
+        public Guid NewsId { get; set; }
         public Guid UserID { get; set; }
         public DateTime LikedDate { get; set; }
         public bool Liked { get; set; }

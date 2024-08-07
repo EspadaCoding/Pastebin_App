@@ -1,12 +1,7 @@
-export class NewsToCreate {  
+export interface NewsToCreate {  
     title: string;
-    content: string;
+    content: string; 
     poster: string; 
-    categoryid:string;
-    constructor(){ 
-         this.title = "";
-         this.content = "";
-         this.poster = ""; 
-         this.categoryid = ""; 
-    }
+    username: string; 
+    categoryid:string; 
 }

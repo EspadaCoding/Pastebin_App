@@ -3,24 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\Cyborg\\Documents\\GitHub\\Pastebin_App\\Uncos.BackEnd\\Uncos.BackEnd\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{FF4386F9-6427-4415-86F4-530528F46514}|Uncos.Application\\Uncos.Application.csproj|c:\\users\\cyborg\\documents\\github\\pastebin_app\\uncos.backend\\uncos.backend\\uncos.application\\news\\queries\\getallnewslist\\getallnewsqueryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FF4386F9-6427-4415-86F4-530528F46514}|Uncos.Application\\Uncos.Application.csproj|solutionrelative:uncos.application\\news\\queries\\getallnewslist\\getallnewsqueryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{909266CE-BB79-4518-AA51-95F5A7201ACE}|Uncos.WebAPI\\Uncos.WebAPI.csproj|c:\\users\\cyborg\\documents\\github\\pastebin_app\\uncos.backend\\uncos.backend\\uncos.webapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{909266CE-BB79-4518-AA51-95F5A7201ACE}|Uncos.WebAPI\\Uncos.WebAPI.csproj|solutionrelative:uncos.webapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FF4386F9-6427-4415-86F4-530528F46514}|Uncos.Application\\Uncos.Application.csproj|c:\\users\\cyborg\\documents\\github\\pastebin_app\\uncos.backend\\uncos.backend\\uncos.application\\news\\queries\\getallnewslist\\newsdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FF4386F9-6427-4415-86F4-530528F46514}|Uncos.Application\\Uncos.Application.csproj|solutionrelative:uncos.application\\news\\queries\\getallnewslist\\newsdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{909266CE-BB79-4518-AA51-95F5A7201ACE}|Uncos.WebAPI\\Uncos.WebAPI.csproj|c:\\users\\cyborg\\documents\\github\\pastebin_app\\uncos.backend\\uncos.backend\\uncos.webapi\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{909266CE-BB79-4518-AA51-95F5A7201ACE}|Uncos.WebAPI\\Uncos.WebAPI.csproj|solutionrelative:uncos.webapi\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FF4386F9-6427-4415-86F4-530528F46514}|Uncos.Application\\Uncos.Application.csproj|c:\\users\\cyborg\\documents\\github\\pastebin_app\\uncos.backend\\uncos.backend\\uncos.application\\news\\queries\\getallnewslist\\allnewslistvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FF4386F9-6427-4415-86F4-530528F46514}|Uncos.Application\\Uncos.Application.csproj|solutionrelative:uncos.application\\news\\queries\\getallnewslist\\allnewslistvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{909266CE-BB79-4518-AA51-95F5A7201ACE}|Uncos.WebAPI\\Uncos.WebAPI.csproj|c:\\users\\cyborg\\documents\\github\\pastebin_app\\uncos.backend\\uncos.backend\\uncos.webapi\\controllers\\newscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{909266CE-BB79-4518-AA51-95F5A7201ACE}|Uncos.WebAPI\\Uncos.WebAPI.csproj|solutionrelative:uncos.webapi\\controllers\\newscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{547367DC-3432-4267-A392-6E43531557D8}|Uncos.Domain\\Uncos.Domain.csproj|c:\\users\\cyborg\\documents\\github\\pastebin_app\\uncos.backend\\uncos.backend\\uncos.domain\\news.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{547367DC-3432-4267-A392-6E43531557D8}|Uncos.Domain\\Uncos.Domain.csproj|solutionrelative:uncos.domain\\news.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{909266CE-BB79-4518-AA51-95F5A7201ACE}|Uncos.WebAPI\\Uncos.WebAPI.csproj|c:\\users\\cyborg\\documents\\github\\pastebin_app\\uncos.backend\\uncos.backend\\uncos.webapi\\services\\newsservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{909266CE-BB79-4518-AA51-95F5A7201ACE}|Uncos.WebAPI\\Uncos.WebAPI.csproj|solutionrelative:uncos.webapi\\services\\newsservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,68 +22,45 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "NewsController.cs",
-              "DocumentMoniker": "C:\\Users\\Cyborg\\Documents\\GitHub\\Pastebin_App\\Uncos.BackEnd\\Uncos.BackEnd\\Uncos.WebAPI\\Controllers\\NewsController.cs",
-              "RelativeDocumentMoniker": "Uncos.WebAPI\\Controllers\\NewsController.cs",
-              "ToolTip": "C:\\Users\\Cyborg\\Documents\\GitHub\\Pastebin_App\\Uncos.BackEnd\\Uncos.BackEnd\\Uncos.WebAPI\\Controllers\\NewsController.cs",
-              "RelativeToolTip": "Uncos.WebAPI\\Controllers\\NewsController.cs",
-              "ViewState": "AQIAAAkAAAAAAAAAAAAAABgAAAAaAAAA",
+              "DocumentIndex": 2,
+              "Title": "NewsService.cs",
+              "DocumentMoniker": "C:\\Users\\Cyborg\\Documents\\GitHub\\Pastebin_App\\Uncos.BackEnd\\Uncos.BackEnd\\Uncos.WebAPI\\Services\\NewsService.cs",
+              "RelativeDocumentMoniker": "Uncos.WebAPI\\Services\\NewsService.cs",
+              "ToolTip": "C:\\Users\\Cyborg\\Documents\\GitHub\\Pastebin_App\\Uncos.BackEnd\\Uncos.BackEnd\\Uncos.WebAPI\\Services\\NewsService.cs",
+              "RelativeToolTip": "Uncos.WebAPI\\Services\\NewsService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAApAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-30T10:18:55.849Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "News.cs",
-              "DocumentMoniker": "C:\\Users\\Cyborg\\Documents\\GitHub\\Pastebin_App\\Uncos.BackEnd\\Uncos.BackEnd\\Uncos.Domain\\News.cs",
-              "RelativeDocumentMoniker": "Uncos.Domain\\News.cs",
-              "ToolTip": "C:\\Users\\Cyborg\\Documents\\GitHub\\Pastebin_App\\Uncos.BackEnd\\Uncos.BackEnd\\Uncos.Domain\\News.cs",
-              "RelativeToolTip": "Uncos.Domain\\News.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAGAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-30T10:18:01.553Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "NewsDto.cs",
-              "DocumentMoniker": "C:\\Users\\Cyborg\\Documents\\GitHub\\Pastebin_App\\Uncos.BackEnd\\Uncos.BackEnd\\Uncos.Application\\News\\Queries\\GetAllNewsList\\NewsDto.cs",
-              "RelativeDocumentMoniker": "Uncos.Application\\News\\Queries\\GetAllNewsList\\NewsDto.cs",
-              "ToolTip": "C:\\Users\\Cyborg\\Documents\\GitHub\\Pastebin_App\\Uncos.BackEnd\\Uncos.BackEnd\\Uncos.Application\\News\\Queries\\GetAllNewsList\\NewsDto.cs",
-              "RelativeToolTip": "Uncos.Application\\News\\Queries\\GetAllNewsList\\NewsDto.cs",
-              "ViewState": "AQIAABEAAAAAAAAAAAA3wAwAAAAYAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-30T09:48:52.475Z",
+              "WhenOpened": "2024-08-07T19:10:54.076Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "AllNewsListVm.cs",
-              "DocumentMoniker": "C:\\Users\\Cyborg\\Documents\\GitHub\\Pastebin_App\\Uncos.BackEnd\\Uncos.BackEnd\\Uncos.Application\\News\\Queries\\GetAllNewsList\\AllNewsListVm.cs",
-              "RelativeDocumentMoniker": "Uncos.Application\\News\\Queries\\GetAllNewsList\\AllNewsListVm.cs",
-              "ToolTip": "C:\\Users\\Cyborg\\Documents\\GitHub\\Pastebin_App\\Uncos.BackEnd\\Uncos.BackEnd\\Uncos.Application\\News\\Queries\\GetAllNewsList\\AllNewsListVm.cs",
-              "RelativeToolTip": "Uncos.Application\\News\\Queries\\GetAllNewsList\\AllNewsListVm.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAXAAAA",
+              "DocumentIndex": 1,
+              "Title": "UserService.cs",
+              "DocumentMoniker": "C:\\Users\\Cyborg\\Documents\\GitHub\\Pastebin_App\\Uncos.BackEnd\\Uncos.BackEnd\\Uncos.WebAPI\\Services\\UserService.cs",
+              "RelativeDocumentMoniker": "Uncos.WebAPI\\Services\\UserService.cs",
+              "ToolTip": "C:\\Users\\Cyborg\\Documents\\GitHub\\Pastebin_App\\Uncos.BackEnd\\Uncos.BackEnd\\Uncos.WebAPI\\Services\\UserService.cs",
+              "RelativeToolTip": "Uncos.WebAPI\\Services\\UserService.cs",
+              "ViewState": "AQIAABMAAAAAAAAAAAAQwAkAAAAsAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-30T09:46:48.589Z"
+              "WhenOpened": "2024-08-07T18:50:39.984Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "GetAllNewsQueryHandler.cs",
-              "DocumentMoniker": "C:\\Users\\Cyborg\\Documents\\GitHub\\Pastebin_App\\Uncos.BackEnd\\Uncos.BackEnd\\Uncos.Application\\News\\Queries\\GetAllNewsList\\GetAllNewsQueryHandler.cs",
-              "RelativeDocumentMoniker": "Uncos.Application\\News\\Queries\\GetAllNewsList\\GetAllNewsQueryHandler.cs",
-              "ToolTip": "C:\\Users\\Cyborg\\Documents\\GitHub\\Pastebin_App\\Uncos.BackEnd\\Uncos.BackEnd\\Uncos.Application\\News\\Queries\\GetAllNewsList\\GetAllNewsQueryHandler.cs",
-              "RelativeToolTip": "Uncos.Application\\News\\Queries\\GetAllNewsList\\GetAllNewsQueryHandler.cs",
-              "ViewState": "AQIAAAcAAAAAAAAAAAAAAA8AAAA0AAAA",
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Cyborg\\Documents\\GitHub\\Pastebin_App\\Uncos.BackEnd\\Uncos.BackEnd\\Uncos.WebAPI\\Program.cs",
+              "RelativeDocumentMoniker": "Uncos.WebAPI\\Program.cs",
+              "ToolTip": "C:\\Users\\Cyborg\\Documents\\GitHub\\Pastebin_App\\Uncos.BackEnd\\Uncos.BackEnd\\Uncos.WebAPI\\Program.cs",
+              "RelativeToolTip": "Uncos.WebAPI\\Program.cs",
+              "ViewState": "AQIAAGsAAAAAAAAAAAAgwGsAAAAwAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-30T08:28:43.265Z",
+              "WhenOpened": "2024-08-07T18:27:16.414Z",
               "EditorCaption": ""
             }
           ]

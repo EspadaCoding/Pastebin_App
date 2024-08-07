@@ -35,5 +35,37 @@ namespace Uncos.WebAPI.Controllers
 
             return Ok(new { Message = "User is authenticated", UserId = userId });
         }
+
+        [HttpGet] 
+        [Route("CheckPermissions")] 
+        public IActionResult CheckPermissions()
+        {
+            try
+            {
+                var folderPath = Path.Combine(Directory.GetCurrentDirectory(), "Resources", "Images");
+                var testFilePath = Path.Combine(folderPath, "testfile.txt");
+
+                if (!Directory.Exists(folderPath))
+                {
+                    return NotFound("Папка не найдена.");
+                }
+
+                // Попробуйте создать и удалить тестовый файл, чтобы проверить права на запись и удаление
+                using (var fs = new FileStream(testFilePath, FileMode.CreateNew))
+                {
+                    using (var sw = new StreamWriter(fs))
+                    {
+                        sw.WriteLine("Тест");
+                    }
+                }
+                System.IO.File.Delete(testFilePath);
+
+                return Ok("Права доступа в порядке.");
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, $"Ошибка доступа к файлам: {ex.Message}");
+            }
+        }
     }
 }

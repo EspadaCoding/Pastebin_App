@@ -15,8 +15,7 @@ export class LoginComponent {
   isSignUpFailed = false; 
   isLoggedIn = false;
   isLoginFailed = false;
-  errorMessage = '';
-  roles: string[] = []; 
+  errorMessage = ''; 
   signupObj:SignUp;  
   loginObj:Login;
 
@@ -28,56 +27,66 @@ export class LoginComponent {
       this.signupObj=new SignUp();
    } 
    ngOnInit(): void {
-    // if (this.tokenStorage.getToken()) {
-    //   this.isLoggedIn = true;
-    //   this.roles = this.tokenStorage.getUser().roles;
-    // }
+    if (this.tokenStorage.getToken()) {
+      this.isLoggedIn = true; 
+    }
   }
 
 
 
-     onSignUp() {   
-      this.authService.register(this.signupObj).subscribe(
-        data => {
-          console.log(data);
-          this.isSuccessful = true;
-          this.isSignUpFailed = false;
-          this.clearData(); 
-          this.router.navigate(['/home']);
-        },
-        err => {
-          this.errorMessage = err.error.message;
-          this.isSignUpFailed = true;
-          this.clearData(); 
-          this.reloadPage();
-          alert("Error =>"+this.errorMessage);
-        }
-      ); 
- 
-       
-     } 
-     onLogin() {
-      // this.authService.login(this.loginObj).subscribe(
-      //   data => {
-      //     this.tokenStorage.saveToken(data.token);
-      //     this.tokenStorage.saveUser(data.name); 
-      //     this.isLoginFailed = false;
-      //     this.isLoggedIn = true;
-      //     this.roles = this.tokenStorage.getUser().roles;
-      //     this.clearData();  
-      //     this.router.navigate(['/home']);
-      //   },
-      //   err => {
-      //     this.errorMessage = err.error.message;
-      //     this.isLoginFailed = true;
-      //     this.clearData(); 
-      //     this.reloadPage();
-      //     alert("Error =>"+ this.errorMessage);
-      //   }
-      // );
-      this.router.navigate(['/home']);
-       
-    } 
+  async onSignUp() {   
+    try {
+      const data = await this.authService.register(this.signupObj).toPromise();
+      this.handleSuccess(data);
+    } catch (err) {
+      this.handleError(err);
+    }
+  }
+  
+  handleSuccess(data) {
+    console.log(data);
+    this.tokenStorage.saveToken(data.token);
+    this.tokenStorage.saveUser(data.username);
+    this.isSuccessful = true;
+    this.isSignUpFailed = false;
+    this.clearData(); 
+    this.router.navigate(['/home']);
+  } 
+  handleError(err) {
+    this.errorMessage = err.error.message;
+    this.isSignUpFailed = true;
+    this.clearData(); 
+    this.reloadPage();
+    console.log("Error => " + this.errorMessage);
+  }
+
+
+  async onLogin() {
+    try {
+      const data = await this.authService.login(this.loginObj).toPromise();
+      this.handleLoginSuccess(data);
+    } catch (err) {
+      this.handleLoginError(err);
+    }
+  }
+  
+  handleLoginSuccess(data) {
+    this.tokenStorage.saveToken(data.token);
+    this.tokenStorage.saveUser(data.username);
+    this.isLoginFailed = false;
+    this.isLoggedIn = true; 
+    this.clearData();  
+    this.router.navigate(['/home']);
+  }
+  
+  handleLoginError(err) {
+    this.errorMessage = err.error.message;
+    this.isLoginFailed = true;
+    this.clearData(); 
+    this.reloadPage();
+    console.log("Error => " + this.errorMessage);
+  }
+  
 
 
     clearData(): void {

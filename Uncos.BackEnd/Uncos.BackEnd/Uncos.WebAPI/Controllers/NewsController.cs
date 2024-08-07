@@ -10,6 +10,8 @@ using Uncos.Domain;
 using Microsoft.AspNetCore.Authorization; 
 using Uncos.Application.News.Queries.GetUserNewsList;
 using Uncos.Application.News.Queries.GetAllNewsList;
+using Uncos.Application.News.Commands.LikeNews;
+using Uncos.Application.Interfaces;
 namespace Uncos.WebAPI.Controllers
 {
     [ApiController]
@@ -57,21 +59,28 @@ namespace Uncos.WebAPI.Controllers
             };
             var vm = await Mediator.Send(query);
             return Ok(vm);
-        }
+        } 
 
-        [HttpPost] 
+
+        [HttpPost]
         [Route("Create")]
         [ProducesResponseType(StatusCodes.Status200OK)]
-        [ProducesResponseType(StatusCodes.Status404NotFound)]
-        public async Task<ActionResult<Guid>> Create([FromForm] CreateNewsDto createNewsDto)
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        public async Task<ActionResult<Guid>> Create([FromBody] CreateNewsDto createNewsDto)
         {
-            var command = _mapper.Map<CreateNewsCommand>(createNewsDto); 
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+
+            var command = _mapper.Map<CreateNewsCommand>(createNewsDto);
             command.userId = UserId;
-            await Mediator.Send(command); 
-            return Ok("News Created !");
+            var result = await Mediator.Send(command);
+
+            return Ok(result);
         }
 
-        [HttpPut]
+        [HttpPost]
         [Authorize]
         [Route("Update/{id}")]
         [ProducesResponseType(StatusCodes.Status200OK)]
@@ -83,6 +92,9 @@ namespace Uncos.WebAPI.Controllers
               await Mediator.Send(command); 
             return NoContent();
         }
+
+        
+
 
         [HttpDelete]
         [Authorize]
@@ -98,7 +110,36 @@ namespace Uncos.WebAPI.Controllers
             };
             await Mediator.Send(command);
             return NoContent();
-        } 
+        }
+         
+        [HttpPost]
+        [Authorize]
+        [Route("like/{id}")]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
+        public async Task<IActionResult> LikeNews(Guid id)
+        {
+            
+            var command = new LikeNewsCommand
+            {
+                NewsId = id,
+                UserId = UserId
+            };
 
+            try
+            {
+                await Mediator.Send(command); 
+                return Ok("Liked");
+            }
+            catch (InvalidOperationException ex) // Для обработки отсутствия новости
+            {
+                return NotFound(ex.Message);
+            }
+            catch (Exception ex) // Для других ошибок
+            {
+                return StatusCode(StatusCodes.Status500InternalServerError, ex.Message);
+            }
+        }
     }
-}
+
+} 

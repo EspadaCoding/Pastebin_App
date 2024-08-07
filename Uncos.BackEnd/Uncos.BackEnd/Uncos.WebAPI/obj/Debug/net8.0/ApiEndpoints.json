@@ -53,6 +53,16 @@
   },
   {
     "ContainingType": "Uncos.WebAPI.Controllers.SecureController",
+    "Method": "CheckPermissions",
+    "RelativePath": "api/Secure/CheckPermissions",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Uncos.WebAPI.Controllers.SecureController",
     "Method": "GetSecureData",
     "RelativePath": "api/Secure/secure-data",
     "HttpMethod": "GET",
@@ -88,24 +98,9 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "Title",
-        "Type": "System.String",
-        "IsRequired": false
-      },
-      {
-        "Name": "Content",
-        "Type": "System.String",
-        "IsRequired": false
-      },
-      {
-        "Name": "Poster",
-        "Type": "System.String",
-        "IsRequired": false
-      },
-      {
-        "Name": "CategoryId",
-        "Type": "System.Guid",
-        "IsRequired": false
+        "Name": "createNewsDto",
+        "Type": "Uncos.WebAPI.Models.CreateNewsDto",
+        "IsRequired": true
       }
     ],
     "ReturnTypes": [
@@ -121,7 +116,7 @@
         "MediaTypes": [
           "application/json"
         ],
-        "StatusCode": 404
+        "StatusCode": 400
       }
     ]
   },
@@ -223,9 +218,38 @@
   },
   {
     "ContainingType": "Uncos.WebAPI.Controllers.NewsController",
+    "Method": "LikeNews",
+    "RelativePath": "api/v1/News/like/{id}",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      },
+      {
+        "Type": "Microsoft.AspNetCore.Mvc.ProblemDetails",
+        "MediaTypes": [
+          "application/json"
+        ],
+        "StatusCode": 404
+      }
+    ]
+  },
+  {
+    "ContainingType": "Uncos.WebAPI.Controllers.NewsController",
     "Method": "Update",
     "RelativePath": "api/v1/News/Update/{id}",
-    "HttpMethod": "PUT",
+    "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [

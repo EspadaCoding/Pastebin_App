@@ -1,19 +1,17 @@
-const sign_in_btn = document.querySelector("#sign-in-btn");
-const sign_up_btn = document.querySelector("#sign-up-btn");
-const container = document.querySelector(".container");
+ 
+document.addEventListener("DOMContentLoaded", function() {
+  const signUpButton = document.getElementById('sign-up-btn');
+  const signInButton = document.getElementById('sign-in-btn');
+  const container = document.querySelector('.ccontainer');
 
-sign_up_btn.addEventListener("click", () => {
-  container.classList.add("sign-up-mode");
-});
-
-sign_in_btn.addEventListener("click", () => {
-  container.classList.remove("sign-up-mode");
-});
-
-document.querySelector( document ).ready(function() {
-
-  document.querySelector(window).scroll(function(){
-  document.querySelector('.topnav').toggleClass('scrollednav py-0', document.querySelector(this).scrollTop() > 50);
+  signUpButton.addEventListener('click', () => {
+      container.classList.add('sign-up-mode');
   });
-  
+
+  signInButton.addEventListener('click', () => {
+      container.classList.remove('sign-up-mode');
+  });
 });
+
+ 
+ 

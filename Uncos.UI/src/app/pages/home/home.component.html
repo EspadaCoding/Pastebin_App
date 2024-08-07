@@ -8,7 +8,7 @@ MAIN
   <div class="container">
 	<div class="row justify-content-between">
 		<div class="col-md-8">
-			<h5 class="font-weight-bold spanborder"><span>All Stories</span></h5>
+			<h5 class="font-weight-bold spanborder"><span>All Stories {{currentUser}}</span></h5>
 			<div class="mb-3 d-flex justify-content-between"> 
                 
                 
@@ -22,7 +22,7 @@ MAIN
                     <div class="row align-items-center" *ngIf="news.poster.length !== 0" >
                       <div class="col-12 col-md-6">
                         <div class="single-blog-thumbnail">
-                          <img  alt="News image">
+                          <img  [src]="createImgPath(news.poster)" alt="News image">
                           <div class="post-date">
                             <a>{{ news.createdDate | date:'d MMMM' }}</a>
                           </div>
@@ -32,12 +32,14 @@ MAIN
                         <div class="single-blog-content">
                           <div class="line"></div>
                           <h4><a [routerLink]="['/single-post', news.id]" class="post-headline">{{ news.title }}</a></h4>
-                          <p>{{ news.content }}</p>
+                          <p>{{ (news.content.length>200)? (news.content | slice:0:200)+'...':(news.content) }}</p> 
                           <div class="post-meta">
-                            <p>By <a>{{ news.userId }}</a></p>
+                            <p>By <a>{{ news.username }}</a></p>
                             <p>{{ news.countofComments }} comments</p>
-                            <i class="fas fa-heart"></i>
-                            <i class="fas fa-bookmark"></i>
+                            <i class="fas fa-heart"  [ngClass]="{'liked': news.itLiked}"   (click)="toggleLike(news)"></i>
+                            <i class="fas fa-bookmark" 
+                            [ngClass]="{ 'saved': news.itSaved, 'unsaved': !news.itSaved }" 
+                            (click)="toggleSave(news)"></i>
                           </div>
                         </div>
                       </div>
@@ -50,10 +52,14 @@ MAIN
                           <h4><a [routerLink]="['/single-post', news.id]" class="post-headline">{{ news.title }}</a></h4>
                           <p>{{ news.content }}</p>
                           <div class="post-meta">
-                            <p>By <a>{{ news.userId }}</a></p>
+                            <p>By <a>{{ news.username }}</a></p>
                             <p>{{ news.countofComments }} comments</p>
-                            <i class="fas fa-heart"></i>
-                            <i class="fas fa-bookmark"></i>
+                            <i class="fas fa-heart" 
+                            [ngClass]="{ 'liked': news.itLiked, 'unliked': !news.itLiked }" 
+                            (click)="toggleLike(news)"></i>
+                            <i class="fas fa-bookmark" 
+                            [ngClass]="{ 'saved': news.itSaved, 'unsaved': !news.itSaved }" 
+                            (click)="toggleSave(news)"></i>
                           </div>
                         </div>
                       </div>

@@ -16,9 +16,9 @@ namespace Uncos.WebAPI.Controllers
     [ApiController]
     public class AuthController : ControllerBase
     {
-        private readonly IUserService _userService;
+        private readonly UserService _userService;
 
-        public AuthController(IUserService userService)
+        public AuthController(UserService userService)
         {
             _userService = userService;
         }

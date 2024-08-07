@@ -1,14 +1,9 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap");  
-
- 
-
 .ccontainer {
   position: relative;
   width: 100%;
   background-color: #fff;
   min-height: 100vh;
-  overflow: hidden; 
-
+  overflow: hidden;
 }
 
 .forms-ccontainer {
@@ -62,7 +57,7 @@ form.sign-in-form {
   max-width: 380px;
   width: 100%;
   background-color: none;
-   box-shadow: none;
+  box-shadow: none;
   margin: 10px 0;
   height: 55px;
   border-radius: 55px;
@@ -128,7 +123,7 @@ form.sign-in-form {
 .btn {
   width: 150px;
   background-color: #5995fd;
-  border: none;
+  border: 2px solid #4d84e2;
   outline: none;
   height: 49px;
   border-radius: 49px;
@@ -143,6 +138,7 @@ form.sign-in-form {
 .btn:hover {
   background-color: #4d84e2;
 }
+
 .panels-ccontainer {
   position: absolute;
   height: 100%;
@@ -265,129 +261,129 @@ form.sign-in-form {
 
 @media (max-width: 870px) {
   .ccontainer {
-    min-height: 800px;
-    height: 100vh;
+      min-height: 800px;
+      height: 100vh;
   }
   .signin-signup {
-    width: 100%;
-    top: 95%;
-    transform: translate(-50%, -100%);
-    transition: 1s 0.8s ease-in-out;
+      width: 100%;
+      top: 95%;
+      transform: translate(-50%, -100%);
+      transition: 1s 0.8s ease-in-out;
   }
 
   .signin-signup,
   .ccontainer.sign-up-mode .signin-signup {
-    left: 50%;
+      left: 50%;
   }
 
   .panels-ccontainer {
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 2fr 1fr;
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr 2fr 1fr;
   }
 
   .panel {
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-    padding: 2.5rem 8%;
-    grid-column: 1 / 2;
+      flex-direction: row;
+      justify-content: space-around;
+      align-items: center;
+      padding: 2.5rem 8%;
+      grid-column: 1 / 2;
   }
 
   .right-panel {
-    grid-row: 3 / 4;
+      grid-row: 3 / 4;
   }
 
   .left-panel {
-    grid-row: 1 / 2;
+      grid-row: 1 / 2;
   }
 
   .image {
-    width: 200px;
-    transition: transform 0.9s ease-in-out;
-    transition-delay: 0.6s;
+      width: 200px;
+      transition: transform 0.9s ease-in-out;
+      transition-delay: 0.6s;
   }
 
   .panel .content {
-    padding-right: 15%;
-    transition: transform 0.9s ease-in-out;
-    transition-delay: 0.8s;
+      padding-right: 15%;
+      transition: transform 0.9s ease-in-out;
+      transition-delay: 0.8s;
   }
 
   .panel h3 {
-    font-size: 1.2rem;
+      font-size: 1.2rem;
   }
 
   .panel p {
-    font-size: 0.7rem;
-    padding: 0.5rem 0;
+      font-size: 0.7rem;
+      padding: 0.5rem 0;
   }
 
   .btn.transparent {
-    width: 110px;
-    height: 35px;
-    font-size: 0.7rem;
+      width: 110px;
+      height: 35px;
+      font-size: 0.7rem;
   }
 
   .ccontainer:before {
-    width: 1500px;
-    height: 1500px;
-    transform: translateX(-50%);
-    left: 30%;
-    bottom: 68%;
-    right: initial;
-    top: initial;
-    transition: 2s ease-in-out;
+      width: 1500px;
+      height: 1500px;
+      transform: translateX(-50%);
+      left: 30%;
+      bottom: 68%;
+      right: initial;
+      top: initial;
+      transition: 2s ease-in-out;
   }
 
   .ccontainer.sign-up-mode:before {
-    transform: translate(-50%, 100%);
-    bottom: 32%;
-    right: initial;
+      transform: translate(-50%, 100%);
+      bottom: 32%;
+      right: initial;
   }
 
   .ccontainer.sign-up-mode .left-panel .image,
   .ccontainer.sign-up-mode .left-panel .content {
-    transform: translateY(-300px);
+      transform: translateY(-300px);
   }
 
   .ccontainer.sign-up-mode .right-panel .image,
   .ccontainer.sign-up-mode .right-panel .content {
-    transform: translateY(0px);
+      transform: translateY(0px);
   }
 
   .right-panel .image,
   .right-panel .content {
-    transform: translateY(300px);
+      transform: translateY(300px);
   }
 
   .ccontainer.sign-up-mode .signin-signup {
-    top: 5%;
-    transform: translate(-50%, 0);
+      top: 5%;
+      transform: translate(-50%, 0);
   }
 }
 
 @media (max-width: 570px) {
   form {
-    padding: 0 1.5rem;
+      padding: 0 1.5rem;
   }
 
   .image {
-    display: none;
+      display: none;
   }
   .panel .content {
-    padding: 0.5rem 1rem;
+      padding: 0.5rem 1rem;
   }
   .ccontainer {
-    padding: 1.5rem;
+      padding: 1.5rem;
   }
 
   .ccontainer:before {
-    bottom: 72%;
-    left: 50%;
+      bottom: 72%;
+      left: 50%;
   }
 
   .ccontainer.sign-up-mode:before {
-    bottom: 28%;
-    left: 50%;
+      bottom: 28%;
+      left: 50%;
   }
 }

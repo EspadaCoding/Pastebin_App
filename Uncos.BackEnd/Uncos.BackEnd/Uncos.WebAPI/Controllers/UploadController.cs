@@ -13,7 +13,16 @@ namespace Uncos.WebAPI.Controllers
     [Produces("application/json")]
     public class UploadController : BaseController
     {
-        [HttpPost, DisableRequestSizeLimit] 
+        private readonly string _folderName;
+        private readonly string _pathToSave;
+
+        public UploadController()
+        {
+            _folderName = Path.Combine("Resources", "Images");
+            _pathToSave = Path.Combine(Directory.GetCurrentDirectory(), _folderName);
+        }
+
+        [HttpPost, DisableRequestSizeLimit]
         public async Task<IActionResult> Upload()
         {
             try

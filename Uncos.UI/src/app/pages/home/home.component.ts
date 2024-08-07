@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { TokenStorageService } from '../../services/token-storage.service';
 import { NewsService } from '../../services/news.service';  
 import { News } from '../../models/News';
+import { faBookmark, faHeart } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-home',
@@ -9,27 +10,18 @@ import { News } from '../../models/News';
   styleUrl: './home.component.css'
 })
 export class HomeComponent {
+  faHeart = faHeart;
+  faBookmark = faBookmark;
   currentUser: any;
-    Allnews: News[] = [ ];
-  // news:News= {  
-  //   id:  "043D3710-F7DC-4744-BA80-7264C16318BB",     
-  //   userId:  "A89FD8BA-7BA4-462D-B30F-F2BFF960B173",
-  //   title:"Antonia Banderes" ,
-  //   content:  "qwertyuiopasdfghjklzxccvbnmregerger gtht jtyjtyqwertyuiopasdfghjklzxccvbnmregerger qwertyuiopasdfghjklzxccvbnmregerger qwertyuiopasdfghjklzxccvbnmregerger qwertyuiopasdfghjklzxccvbnmregerger qwertyuiopasdfghjklzxccvbnmregerger qwertyuiopasdfghjklzxccvbnmregerger qwertyuiopasdfghjklzxccvbnmregerger qwertyuiopasdfghjklzxccvbnmregerger qwertyuiopasdfghjklzxccvbnmregerger ",
-  //   poster: "assets/img/blog-img/3.jpg" ,
-  //   likes: 15,
-  //   itSaved: false ,
-  //   createdDate:  new Date(),
-  //   categoryId:  "C3F7FEAC-84E2-4784-DC8E-08DC67C68989",
-  //   countofComments: 0 ,
-  // };
+    Allnews: News[] = [ ]; 
 
   constructor(private token: TokenStorageService,
               private newsService: NewsService) { }
 
   ngOnInit(): void {  
-    this.fetchAllNews();
     this.currentUser = this.token.getUser(); 
+    this.fetchAllNews();
+    
   }
   fetchAllNews(): void {
     // Вызов метода getAll() из сервиса NewsService, который возвращает Observable с данными новостей
@@ -59,4 +51,17 @@ export class HomeComponent {
       }
     );
   }
+
+  public createImgPath = (serverPath: string) => { 
+    const modifiedPath = serverPath.replace('Resources', 'StaticFiles');
+    return `https://localhost:44362/${modifiedPath}`;
+   }
+
+   public toggleLike(news: News) {
+    news.itLiked = !news.itLiked;
+  }
+  public toggleSave(news: News) {
+    news.itSaved = !news.itSaved;
+  }
+
 } 

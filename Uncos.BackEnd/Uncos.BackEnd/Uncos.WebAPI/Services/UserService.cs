@@ -7,7 +7,7 @@ using Uncos.WebAPI.Models.AuthModels;
 
 namespace Uncos.WebAPI.Services
 {
-    public class UserService : IUserService
+    public class UserService  : IUserService
     {
         private readonly UserManager<IdentityUser> _userManager;
         private readonly SignInManager<IdentityUser> _signInManager;

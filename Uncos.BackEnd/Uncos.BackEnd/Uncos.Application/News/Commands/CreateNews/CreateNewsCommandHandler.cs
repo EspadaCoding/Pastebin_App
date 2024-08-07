@@ -22,13 +22,13 @@ namespace Uncos.Application.News.Commands.CreateNews
         public async Task<Guid> Handle(CreateNewsCommand request, 
             CancellationToken cancellationToken)
 
-        {
+        { 
 
-             var categoryExists = await _dbContext.Categories.AnyAsync(c => c.Id == request.CategoryId, cancellationToken);
-             if (!categoryExists)
-             {
-                 throw new ArgumentException($"Категория с Id '{request.CategoryId}' не существует.");
-             }
+            var categoryExists = await _dbContext.Categories.AnyAsync(c => c.Id == request.CategoryId, cancellationToken);
+            if (!categoryExists)
+            {
+                throw new ArgumentException($"Категория с Id '{request.CategoryId}' не существует.");
+            }
 
             var news = new Uncos.Domain.News
             {
@@ -37,10 +37,12 @@ namespace Uncos.Application.News.Commands.CreateNews
                 Title = request.Title,
                 Content = request.Content,
                 Poster = request.Poster,
-                CreatedDate = DateTime.Now ,
-                EditDate = null ,
+                CreatedDate = DateTime.Now,
+                EditDate = null,
+                Username = request.Username,
                 CategoryId = request.CategoryId
             };
+
             await _dbContext.News.AddAsync(news, cancellationToken);
             try
             {
@@ -48,15 +50,14 @@ namespace Uncos.Application.News.Commands.CreateNews
             }
             catch (DbUpdateException ex)
             {
-                // Handle or log the exception
+                // Логирование ошибки
                 Console.WriteLine("An error occurred while saving changes: " + ex.Message);
 
-                // Check if there is an inner exception
                 if (ex.InnerException != null)
                 {
                     if (ex.InnerException is SqlException sqlEx)
                     {
-                        // Handle specific SQL exception
+                        // Обработка конкретной SQL ошибки
                         Console.WriteLine("SQL error code: " + sqlEx.Number);
                     }
                     Console.WriteLine("Inner exception: " + ex.InnerException.Message);

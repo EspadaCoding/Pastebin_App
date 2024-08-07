@@ -1,11 +1,6 @@
 ﻿using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore; 
 using Uncos.Application.Interfaces;
 using Uncos.Domain;
 using Uncos.Persistence.EntityTypeConfiguration;
@@ -24,19 +19,14 @@ namespace Uncos.Persistence
             modelBuilder.Entity<IdentityUser>()
                 .HasIndex(u => u.Email)
                 .IsUnique(); 
-            modelBuilder.ApplyConfiguration(new NewsTagConfiguration());
-
-
-
-
-
+            modelBuilder.ApplyConfiguration(new NewsTagConfiguration()); 
 
 
 
             base.OnModelCreating(modelBuilder);
         }
         public DbSet<Category> Categories { get; set; } 
-        public DbSet<Like> Like { get; set; }
+        public DbSet<Like> Likes { get; set; }
         public DbSet<Tag> Tags { get; set; }
         public DbSet<NewsTag> NewsTags { get; set; }
         public DbSet<News> News { get; set; }

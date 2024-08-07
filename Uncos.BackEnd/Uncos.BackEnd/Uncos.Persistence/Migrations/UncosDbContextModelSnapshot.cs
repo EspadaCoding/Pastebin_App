@@ -313,6 +313,9 @@ namespace Uncos.Persistence.Migrations
                     b.Property<DateTime?>("EditDate")
                         .HasColumnType("datetime2");
 
+                    b.Property<bool>("ItLiked")
+                        .HasColumnType("bit");
+
                     b.Property<bool>("ItSaved")
                         .HasColumnType("bit");
 
@@ -324,6 +327,10 @@ namespace Uncos.Persistence.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Title")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Username")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 

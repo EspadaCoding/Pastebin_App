@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "6V7ZndKdRFpfuCEpP5e3iUdakSLGm7xipd1XsiLxrPNyV2ifRXmZDsKkWcJZQ2EMzvQVZHjV14z3ETCbfDGFfQ==",
+  "dgSpecHash": "nFcYhBgmMsmbI6WCIP4OGmraJ6sYdand+ABbIBjxAJmX44t9NtDMi1nykUArLON5tZyWUdJwD658EkIqwhqH/g==",
   "success": true,
   "projectFilePath": "C:\\Users\\Cyborg\\Documents\\GitHub\\Pastebin_App\\Uncos.BackEnd\\Uncos.BackEnd\\Uncos.WebAPI\\Uncos.WebAPI.csproj",
   "expectedPackageFiles": [
@@ -21,12 +21,15 @@
     "C:\\Users\\Cyborg\\.nuget\\packages\\microsoft.aspnetcore.http.abstractions\\2.2.0\\microsoft.aspnetcore.http.abstractions.2.2.0.nupkg.sha512",
     "C:\\Users\\Cyborg\\.nuget\\packages\\microsoft.aspnetcore.http.features\\2.2.0\\microsoft.aspnetcore.http.features.2.2.0.nupkg.sha512",
     "C:\\Users\\Cyborg\\.nuget\\packages\\microsoft.aspnetcore.identity.entityframeworkcore\\8.0.3\\microsoft.aspnetcore.identity.entityframeworkcore.8.0.3.nupkg.sha512",
+    "C:\\Users\\Cyborg\\.nuget\\packages\\microsoft.aspnetcore.jsonpatch\\8.0.7\\microsoft.aspnetcore.jsonpatch.8.0.7.nupkg.sha512",
+    "C:\\Users\\Cyborg\\.nuget\\packages\\microsoft.aspnetcore.mvc.newtonsoftjson\\8.0.7\\microsoft.aspnetcore.mvc.newtonsoftjson.8.0.7.nupkg.sha512",
     "C:\\Users\\Cyborg\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\6.0.0\\microsoft.bcl.asyncinterfaces.6.0.0.nupkg.sha512",
     "C:\\Users\\Cyborg\\.nuget\\packages\\microsoft.codeanalysis.analyzers\\3.3.3\\microsoft.codeanalysis.analyzers.3.3.3.nupkg.sha512",
     "C:\\Users\\Cyborg\\.nuget\\packages\\microsoft.codeanalysis.common\\4.5.0\\microsoft.codeanalysis.common.4.5.0.nupkg.sha512",
     "C:\\Users\\Cyborg\\.nuget\\packages\\microsoft.codeanalysis.csharp\\4.5.0\\microsoft.codeanalysis.csharp.4.5.0.nupkg.sha512",
     "C:\\Users\\Cyborg\\.nuget\\packages\\microsoft.codeanalysis.csharp.workspaces\\4.5.0\\microsoft.codeanalysis.csharp.workspaces.4.5.0.nupkg.sha512",
     "C:\\Users\\Cyborg\\.nuget\\packages\\microsoft.codeanalysis.workspaces.common\\4.5.0\\microsoft.codeanalysis.workspaces.common.4.5.0.nupkg.sha512",
+    "C:\\Users\\Cyborg\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\Cyborg\\.nuget\\packages\\microsoft.data.sqlclient\\5.1.5\\microsoft.data.sqlclient.5.1.5.nupkg.sha512",
     "C:\\Users\\Cyborg\\.nuget\\packages\\microsoft.data.sqlclient.sni.runtime\\5.1.1\\microsoft.data.sqlclient.sni.runtime.5.1.1.nupkg.sha512",
     "C:\\Users\\Cyborg\\.nuget\\packages\\microsoft.entityframeworkcore\\8.0.3\\microsoft.entityframeworkcore.8.0.3.nupkg.sha512",
@@ -62,7 +65,8 @@
     "C:\\Users\\Cyborg\\.nuget\\packages\\microsoft.sqlserver.server\\1.0.0\\microsoft.sqlserver.server.1.0.0.nupkg.sha512",
     "C:\\Users\\Cyborg\\.nuget\\packages\\microsoft.win32.systemevents\\6.0.0\\microsoft.win32.systemevents.6.0.0.nupkg.sha512",
     "C:\\Users\\Cyborg\\.nuget\\packages\\mono.texttemplating\\2.2.1\\mono.texttemplating.2.2.1.nupkg.sha512",
-    "C:\\Users\\Cyborg\\.nuget\\packages\\newtonsoft.json\\12.0.2\\newtonsoft.json.12.0.2.nupkg.sha512",
+    "C:\\Users\\Cyborg\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512",
+    "C:\\Users\\Cyborg\\.nuget\\packages\\newtonsoft.json.bson\\1.0.2\\newtonsoft.json.bson.1.0.2.nupkg.sha512",
     "C:\\Users\\Cyborg\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\6.5.0\\swashbuckle.aspnetcore.swagger.6.5.0.nupkg.sha512",
     "C:\\Users\\Cyborg\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\6.5.0\\swashbuckle.aspnetcore.swaggergen.6.5.0.nupkg.sha512",
     "C:\\Users\\Cyborg\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\6.5.0\\swashbuckle.aspnetcore.swaggerui.6.5.0.nupkg.sha512",
@@ -99,5 +103,26 @@
     "C:\\Users\\Cyborg\\.nuget\\packages\\system.threading.tasks.extensions\\4.5.4\\system.threading.tasks.extensions.4.5.4.nupkg.sha512",
     "C:\\Users\\Cyborg\\.nuget\\packages\\system.windows.extensions\\6.0.0\\system.windows.extensions.6.0.0.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "NU1902",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'IdentityServer4' 4.1.2 has a known moderate severity vulnerability, https://github.com/advisories/GHSA-55p7-v223-x366",
+      "libraryId": "IdentityServer4",
+      "targetGraphs": [
+        "net8.0"
+      ]
+    },
+    {
+      "code": "NU1902",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'IdentityServer4' 4.1.2 has a known moderate severity vulnerability, https://github.com/advisories/GHSA-ff4q-64jc-gx98",
+      "libraryId": "IdentityServer4",
+      "targetGraphs": [
+        "net8.0"
+      ]
+    }
+  ]
 }
