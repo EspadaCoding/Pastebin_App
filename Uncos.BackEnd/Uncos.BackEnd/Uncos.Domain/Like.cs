@@ -16,4 +16,4 @@ namespace Uncos.Domain
         public DateTime LikedDate { get; set; }
         public bool Liked { get; set; }
     }
-}
+} 

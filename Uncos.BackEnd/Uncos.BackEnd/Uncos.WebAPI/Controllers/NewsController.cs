@@ -10,8 +10,8 @@ using Uncos.Domain;
 using Microsoft.AspNetCore.Authorization; 
 using Uncos.Application.News.Queries.GetUserNewsList;
 using Uncos.Application.News.Queries.GetAllNewsList;
-using Uncos.Application.News.Commands.LikeNews;
-using Uncos.Application.Interfaces;
+using Uncos.Application.News.Commands.LikeNews; 
+using Uncos.Application.News.Commands.SaveNews;
 namespace Uncos.WebAPI.Controllers
 {
     [ApiController]
@@ -33,7 +33,8 @@ namespace Uncos.WebAPI.Controllers
             return Ok(vm);
         }
 
-        [HttpGet]  
+        [HttpGet]
+        [Authorize]
         [Route("GetAllUserNews")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         public async Task<ActionResult<UserNewsListVm>> GetAllUserNews()
@@ -46,7 +47,8 @@ namespace Uncos.WebAPI.Controllers
             return Ok(vm);
         }
 
-        [HttpGet] 
+        [HttpGet]
+        [Authorize]
         [Route("GetUserNewsById/{id}")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
@@ -63,6 +65,7 @@ namespace Uncos.WebAPI.Controllers
 
 
         [HttpPost]
+        [Authorize]
         [Route("Create")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
@@ -93,9 +96,7 @@ namespace Uncos.WebAPI.Controllers
             return NoContent();
         }
 
-        
-
-
+         
         [HttpDelete]
         [Authorize]
         [Route("Delete/{id}")]
@@ -140,6 +141,46 @@ namespace Uncos.WebAPI.Controllers
                 return StatusCode(StatusCodes.Status500InternalServerError, ex.Message);
             }
         }
+
+
+        [HttpPost]
+        [Authorize]
+        [Route("save/{id}")]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
+        public async Task<IActionResult> SaveNews(Guid id)
+        {
+            var command = new SaveNewsCommand
+            {
+                NewsId = id,
+                UserId = UserId
+            };
+
+            try
+            {
+                await Mediator.Send(command);
+                return Ok("Saved");
+            }
+            catch (InvalidOperationException ex) // Для обработки отсутствия новости
+            {
+                return NotFound(ex.Message);
+            }
+            catch (Exception ex) // Для других ошибок
+            {
+                return StatusCode(StatusCodes.Status500InternalServerError, ex.Message);
+            }
+        }
+
+
+
+
+
+
+
+
+
+
+
     }
 
 } 

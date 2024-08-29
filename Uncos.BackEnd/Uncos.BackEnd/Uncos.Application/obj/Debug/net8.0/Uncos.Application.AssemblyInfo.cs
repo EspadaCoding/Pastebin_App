@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Uncos.Application")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c89c938b0ec06477dc4bd4ee8c161a58e14c6e94")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+38c25ecc8934accf8f6ef31eda4f4b056b0cc02d")]
 [assembly: System.Reflection.AssemblyProductAttribute("Uncos.Application")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Uncos.Application")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

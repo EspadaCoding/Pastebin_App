@@ -27,6 +27,7 @@ namespace Uncos.Persistence
         }
         public DbSet<Category> Categories { get; set; } 
         public DbSet<Like> Likes { get; set; }
+        public DbSet<Save> Saves { get; set; }
         public DbSet<Tag> Tags { get; set; }
         public DbSet<NewsTag> NewsTags { get; set; }
         public DbSet<News> News { get; set; }

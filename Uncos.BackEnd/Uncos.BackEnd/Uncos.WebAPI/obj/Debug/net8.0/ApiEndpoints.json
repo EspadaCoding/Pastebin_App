@@ -247,6 +247,35 @@
   },
   {
     "ContainingType": "Uncos.WebAPI.Controllers.NewsController",
+    "Method": "SaveNews",
+    "RelativePath": "api/v1/News/save/{id}",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      },
+      {
+        "Type": "Microsoft.AspNetCore.Mvc.ProblemDetails",
+        "MediaTypes": [
+          "application/json"
+        ],
+        "StatusCode": 404
+      }
+    ]
+  },
+  {
+    "ContainingType": "Uncos.WebAPI.Controllers.NewsController",
     "Method": "Update",
     "RelativePath": "api/v1/News/Update/{id}",
     "HttpMethod": "POST",

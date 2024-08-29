@@ -21,6 +21,7 @@ MAIN
                 
                     <div class="row align-items-center" *ngIf="news.poster.length !== 0" >
                       <div class="col-12 col-md-6">
+                        
                         <div class="single-blog-thumbnail">
                           <img  [src]="createImgPath(news.poster)" alt="News image">
                           <div class="post-date">
@@ -34,12 +35,19 @@ MAIN
                           <h4><a [routerLink]="['/single-post', news.id]" class="post-headline">{{ news.title }}</a></h4>
                           <p>{{ (news.content.length>200)? (news.content | slice:0:200)+'...':(news.content) }}</p> 
                           <div class="post-meta">
+                            
                             <p>By <a>{{ news.username }}</a></p>
+                            
                             <p>{{ news.countofComments }} comments</p>
-                            <i class="fas fa-heart"  [ngClass]="{'liked': news.itLiked}"   (click)="toggleLike(news)"></i>
+                            
+                            <i class="fas fa-heart"   
+                            [ngClass]="{ 'liked': news.itLiked, 'unliked': !news.itLiked }" 
+                            (click)="toggleLike(news)"></i>
+
                             <i class="fas fa-bookmark" 
                             [ngClass]="{ 'saved': news.itSaved, 'unsaved': !news.itSaved }" 
                             (click)="toggleSave(news)"></i>
+                         
                           </div>
                         </div>
                       </div>
@@ -47,19 +55,27 @@ MAIN
                 
                     <div class="row align-items-center" *ngIf="news.poster.length === 0" >
                       <div class="col-12">
+                        
                         <div class="single-blog-content mt-50">
                           <div class="line"></div>
                           <h4><a [routerLink]="['/single-post', news.id]" class="post-headline">{{ news.title }}</a></h4>
-                          <p>{{ news.content }}</p>
+                          <p>{{ (news.content.length>200)? (news.content | slice:0:200)+'...':(news.content) }}</p> 
                           <div class="post-meta">
+
                             <p>By <a>{{ news.username }}</a></p>
+
                             <p>{{ news.countofComments }} comments</p>
-                            <i class="fas fa-heart" 
+
+                            <i class="fas fa-heart"   
                             [ngClass]="{ 'liked': news.itLiked, 'unliked': !news.itLiked }" 
                             (click)="toggleLike(news)"></i>
+
                             <i class="fas fa-bookmark" 
                             [ngClass]="{ 'saved': news.itSaved, 'unsaved': !news.itSaved }" 
                             (click)="toggleSave(news)"></i>
+                         
+
+                            
                           </div>
                         </div>
                       </div>
@@ -67,6 +83,97 @@ MAIN
                   </div> 
                 </div>
 
+
+
+
+                
+                <!-- <div class="single-blog-area blog-style-2 mb-50 wow fadeInUp" 
+                data-wow-delay="0.2s" data-wow-duration="1000ms" 
+                *ngFor="let news of Allnews; let i = index">
+                           
+               <div class="row align-items-center" *ngIf="news.poster.length !== 0">
+                   <div class="col-12 col-md-6">
+                       <div class="single-blog-thumbnail">
+                           <img [src]="createImgPath(news.poster)" alt="News image">
+                           <div class="post-date">
+                               <a>{{ news.createdDate | date:'d MMMM' }}</a>
+                           </div>
+                       </div>
+                   </div>
+                   <div class="col-12 col-md-6">
+                       <div class="single-blog-content">
+                           <div class="line"></div>
+                           <h4><a [routerLink]="['/single-post', news.id]" class="post-headline">{{ news.title }}</a></h4>
+                           <p>{{ (news.content.length > 200) ? (news.content | slice:0:200) + '...' : (news.content) }}</p> 
+                           <div class="post-meta">
+                               <p>By <a>{{ news.username }}</a></p>
+                               <p>{{ news.countofComments }} comments</p>
+                               <i class="fas fa-heart" *ngIf="news.itLiked" (click)="toggleLike(news)" [ngClass]="{ liked: news.itLiked, unliked: !news.itLiked }"></i>
+                               <i class="fas fa-bookmark" [ngClass]="{ saved: news.itSaved, unsaved: !news.itSaved }" (click)="toggleSave(news)"></i>
+                               <div class="more" *ngIf="news.username == currentUser">
+                                   <button id="more-btn" class="more-btn">
+                                       <span class="more-dot"></span>
+                                       <span class="more-dot"></span>
+                                       <span class="more-dot"></span>
+                                   </button>
+                                   <div class="more-menu">
+                                       <div class="more-menu-caret">
+                                           <div class="more-menu-caret-outer"></div>
+                                           <div class="more-menu-caret-inner"></div>
+                                       </div>
+                                       <ul class="more-menu-items" tabindex="-1" role="menu" aria-labelledby="more-btn" aria-hidden="true">
+                                           <li class="more-menu-item" role="presentation">
+                                               <button type="button" class="more-menu-btn" role="menuitem">Edit</button>
+                                           </li>
+                                           <li class="more-menu-item" role="presentation">
+                                               <button type="button" class="more-menu-btn" role="menuitem">Delete</button>
+                                           </li> 
+                                       </ul>
+                                   </div>
+                               </div>
+                           </div>
+                       </div>
+                   </div>
+               </div>
+           
+               <div class="row align-items-center" *ngIf="news.poster.length === 0">
+                   <div class="col-12">
+                       <div class="single-blog-content mt-50">
+                           <div class="line"></div>
+                           <h4><a [routerLink]="['/single-post', news.id]" class="post-headline">{{ news.title }}</a></h4>
+                           <p>{{ (news.content.length > 200) ? (news.content | slice:0:200) + '...' : (news.content) }}</p> 
+                           <div class="post-meta">
+                               <p>By <a>{{ news.username }}</a></p>
+                               <p>{{ news.countofComments }} comments</p>
+                               <i class="fas fa-heart" [ngClass]="{ liked: news.itLiked, unliked: !news.itLiked }" (click)="toggleLike(news)"></i>
+                               <i class="fas fa-bookmark" [ngClass]="{ saved: news.itSaved, unsaved: !news.itSaved }" (click)="toggleSave(news)"></i>
+                               <div class="more">
+                                   <button id="more-btn" class="more-btn">
+                                       <span class="more-dot"></span>
+                                       <span class="more-dot"></span>
+                                       <span class="more-dot"></span>
+                                   </button>
+                                   <div class="more-menu">
+                                       <div class="more-menu-caret">
+                                           <div class="more-menu-caret-outer"></div>
+                                           <div class="more-menu-caret-inner"></div>
+                                       </div>
+                                       <ul class="more-menu-items" tabindex="-1" role="menu" aria-labelledby="more-btn" aria-hidden="true">
+                                           <li class="more-menu-item" role="presentation">
+                                               <button type="button" class="more-menu-btn" role="menuitem">Edit</button>
+                                           </li>
+                                           <li class="more-menu-item" role="presentation">
+                                               <button type="button" class="more-menu-btn" role="menuitem">Delete</button>
+                                           </li> 
+                                       </ul>
+                                   </div>
+                               </div>
+                           </div>
+                       </div>
+                   </div>
+               </div>
+           </div>
+            -->
                 
                 <div *ngIf="Allnews.length === 0">
                   <p>No news available.</p>

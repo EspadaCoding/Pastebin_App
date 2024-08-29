@@ -12,15 +12,22 @@ export class NewsService {
 
   constructor(private httpClient: HttpClient) { }
   
-   getAll(): Observable<{ news: News[] }> {
+  getAll(): Observable<{ news: News[] }> {
     return this.httpClient.get<{ news: News[] }>(`${this.apiUrl}/GetAllNews`);
-  }
-
+  } 
   find(id: number): Observable<News> { 
     return this.httpClient.get<News>(`${this.apiUrl}/GetUserNewsById/${id}`);
-  }
-
-  update(id: number, news: News): Observable<void> { 
+  }  
+  update(id: string, news: News): Observable<void> { 
     return this.httpClient.put<void>(`${this.apiUrl}/Update/${id}`, news);
+  } 
+  Likethis(newsId: string): Observable<any> { 
+    return this.httpClient.post<any>(`${this.apiUrl}/like/${newsId}`, null);
   }
+  SaveThis(newsId: string): Observable<any> { 
+    return this.httpClient.post<any>(`${this.apiUrl}/save/${newsId}`, null);
+  }
+  delete(id: string){
+   return this.httpClient.delete(`${this.apiUrl}/Delete/${id}`);
+  } 
 }

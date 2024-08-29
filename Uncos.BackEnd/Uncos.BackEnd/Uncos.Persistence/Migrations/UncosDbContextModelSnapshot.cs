@@ -280,8 +280,8 @@ namespace Uncos.Persistence.Migrations
                     b.Property<DateTime>("LikedDate")
                         .HasColumnType("datetime2");
 
-                    b.Property<int>("NewsId")
-                        .HasColumnType("int");
+                    b.Property<Guid>("NewsId")
+                        .HasColumnType("uniqueidentifier");
 
                     b.Property<Guid>("UserID")
                         .HasColumnType("uniqueidentifier");
@@ -363,6 +363,29 @@ namespace Uncos.Persistence.Migrations
                     b.HasIndex("TagId");
 
                     b.ToTable("NewsTag");
+                });
+
+            modelBuilder.Entity("Uncos.Domain.Save", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid>("NewsId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<bool>("Saved")
+                        .HasColumnType("bit");
+
+                    b.Property<DateTime>("SavedDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<Guid>("UserID")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Save");
                 });
 
             modelBuilder.Entity("Uncos.Domain.Tag", b =>

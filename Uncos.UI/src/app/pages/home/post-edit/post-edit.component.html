@@ -1,0 +1,20 @@
+<div class="container">
+    <form class="post-editor-form">
+      <h1>Edit Post</h1>
+      <label for="title">Title</label>
+      <input [(ngModel)]="title" type="text" class="form-control" id="title" name="title" placeholder="Enter your Title">
+  
+      <label for="content">Content</label>
+      <textarea [(ngModel)]="description" class="form-control" id="description" name="description" placeholder="Enter your Description"></textarea>
+  
+      <label for="category">Category</label>
+      <select [(ngModel)]="selectedCategory" name="category" required>
+        <option *ngFor="let category of categories" [ngValue]="category">{{ category.name }}</option>
+      </select>
+  
+      <app-upload (onUploadFinished)="uploadFinished($event)"></app-upload>
+  
+      <button type="submit" (click)="updateNews()">Update</button>
+    </form>
+  </div>
+  

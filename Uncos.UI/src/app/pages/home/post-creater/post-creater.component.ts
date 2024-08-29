@@ -14,12 +14,12 @@ import { TokenStorageService } from '../../../services/token-storage.service';
 export class PostCreaterComponent {
   public news: NewsToCreate; 
   public title: string;
-  public discription: string;  
-  public posterPath: string;
+  public discription: string;   
   public response: {dbPath: ''};    
   public categories: Category[] = [];
   public selectedCategory: Category;
   //public currentUser: any;
+  selec :true;
 
 
 
@@ -43,6 +43,10 @@ export class PostCreaterComponent {
         console.error('Missing required fields');
         return;
       }
+      if (!this.title   ) {
+        console.error('Missing required fields');
+        return;
+      }
     
       // Получение имени пользователя из sessionStorage 
       const username = this.token.getUser();
@@ -50,17 +54,16 @@ export class PostCreaterComponent {
       if (!username) {
         console.error('User is not logged in');
         return;
-      }
-    
+      } 
+       
       this.news = {
         title: this.title,
-        content: this.discription, 
-        poster: this.response?.dbPath,  
+        content: this.discription,
+        poster: this.response?.dbPath || "", // Если `dbPath` не определен, использует пустую строку
         username: username,
         categoryid: this.selectedCategory.id
-    
       };
-    
+      
       // Логирование данных перед отправкой
       console.log("News Data:", this.news);
     

@@ -1,67 +1,107 @@
 import { Component } from '@angular/core';
 import { TokenStorageService } from '../../services/token-storage.service';
 import { NewsService } from '../../services/news.service';  
-import { News } from '../../models/News';
-import { faBookmark, faHeart } from '@fortawesome/free-solid-svg-icons';
+import { News } from '../../models/News'; 
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })
-export class HomeComponent {
-  faHeart = faHeart;
-  faBookmark = faBookmark;
+export class HomeComponent { 
   currentUser: any;
-    Allnews: News[] = [ ]; 
+    Allnews: News[] = [ ];  
 
   constructor(private token: TokenStorageService,
               private newsService: NewsService) { }
 
   ngOnInit(): void {  
     this.currentUser = this.token.getUser(); 
-    this.fetchAllNews();
-    
+    this.fetchAllNews(); 
   }
+
+
+
   fetchAllNews(): void {
-    // Вызов метода getAll() из сервиса NewsService, который возвращает Observable с данными новостей
     this.newsService.getAll().subscribe(
       res => {
-        // Логируем полученные данные, чтобы проверить их структуру и убедиться, что они получены правильно
         console.log('Received data:', res);
   
-        // Проверяем, есть ли в ответе поле 'news' и является ли оно массивом
         if (res && res.news && Array.isArray(res.news)) {
-          // Если условие выполнено, преобразуем данные и присваиваем их переменной Allnews
+          const likedPosts = this.getSessionStorageArray('likedPosts');
+          const savedPosts = this.getSessionStorageArray('savedPosts');
+  
           this.Allnews = res.news.map((news: any) => ({
-            ...news, // Распаковываем все свойства объекта news
-            createdDate: new Date(news.createdDate) // Преобразуем строку даты в объект Date
+            ...news,
+            createdDate: new Date(news.createdDate),
+            itLiked: likedPosts.includes(news.id),
+            itSaved: savedPosts.includes(news.id),
           }));
         } else {
-          // Если структура данных неожиданная, логируем ошибку
           console.error('Unexpected data format:', res);
         }
-        
-        // Логируем преобразованные данные, чтобы проверить их перед отображением
+  
         console.log('All news:', this.Allnews);
       },
       err => {
-        // Обработка ошибок при запросе к серверу, логируем ошибку для отладки
         console.error('Error fetching news:', err);
       }
     );
-  }
-
-  public createImgPath = (serverPath: string) => { 
+  } 
+  createImgPath = (serverPath: string) => { 
     const modifiedPath = serverPath.replace('Resources', 'StaticFiles');
     return `https://localhost:44362/${modifiedPath}`;
-   }
-
-   public toggleLike(news: News) {
-    news.itLiked = !news.itLiked;
+  } 
+  toggleLike(news: News): void {
+    this.newsService.Likethis(news.id).subscribe({
+      next: (response) => {
+        console.log('Лайк успешно обновлен на сервере', response);
+        news.itLiked = !news.itLiked; // Обновляем состояние в интерфейсе
+  
+        // Обновляем sessionStorage
+        let likedPosts = JSON.parse(sessionStorage.getItem('likedPosts')) || [];
+        if (news.itLiked) {
+          likedPosts.push(news.id);
+        } else {
+          likedPosts = likedPosts.filter(id => id !== news.id);
+        }
+        sessionStorage.setItem('likedPosts', JSON.stringify(likedPosts));
+      },
+      error: (error) => {
+        console.error('Ошибка при обновлении лайка', error);
+      }
+    });
   }
-  public toggleSave(news: News) {
-    news.itSaved = !news.itSaved;
+  toggleSave(news: News): void {
+    this.newsService.SaveThis(news.id).subscribe({
+        next: (response) => {
+            console.log('Пост успешно сохранен/удален на сервере', response);
+            news.itSaved = !news.itSaved; // Обновляем состояние в интерфейсе
+  
+            // Обновляем sessionStorage
+            let savedPosts = JSON.parse(sessionStorage.getItem('savedPosts')) || [];
+            if (news.itSaved) {
+                savedPosts.push(news.id);
+            } else {
+                savedPosts = savedPosts.filter(id => id !== news.id);
+            }
+            sessionStorage.setItem('savedPosts', JSON.stringify(savedPosts));
+        },
+        error: (error) => {
+            console.error('Ошибка при сохранении/удалении поста', error);
+        }
+    });
+  }
+  deleteNews(id:string){
+    this.newsService.delete(id).subscribe(res => {
+      this.Allnews = this.Allnews.filter(item => item.id !== id);
+      console.log('Post deleted successfully!');
+  })
   }
 
+
+
+  private getSessionStorageArray(key: string): string[] {
+    return JSON.parse(sessionStorage.getItem(key) || '[]');
+  } 
 } 

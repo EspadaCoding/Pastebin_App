@@ -112,7 +112,7 @@ services.AddTransient<ILikeService, LikeService>();
 // Регистрация INewsService и NewsService
 services.AddTransient<INewsService, NewsService>();
 
-
+services.AddScoped<ISaveService, SaveService>();
 
 
 

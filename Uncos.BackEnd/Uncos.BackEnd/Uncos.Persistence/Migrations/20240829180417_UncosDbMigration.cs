@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace Uncos.Persistence.Migrations
 {
     /// <inheritdoc />
-    public partial class UncosDb : Migration
+    public partial class UncosDbMigration : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -82,7 +82,7 @@ namespace Uncos.Persistence.Migrations
                 columns: table => new
                 {
                     Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    NewsId = table.Column<int>(type: "int", nullable: false),
+                    NewsId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
                     UserID = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
                     LikedDate = table.Column<DateTime>(type: "datetime2", nullable: false),
                     Liked = table.Column<bool>(type: "bit", nullable: false)
@@ -90,6 +90,21 @@ namespace Uncos.Persistence.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Like", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Save",
+                columns: table => new
+                {
+                    Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    NewsId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    UserID = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    SavedDate = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    Saved = table.Column<bool>(type: "bit", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Save", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
@@ -359,6 +374,9 @@ namespace Uncos.Persistence.Migrations
 
             migrationBuilder.DropTable(
                 name: "NewsTag");
+
+            migrationBuilder.DropTable(
+                name: "Save");
 
             migrationBuilder.DropTable(
                 name: "AspNetRoles");
